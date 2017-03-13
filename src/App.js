@@ -1,13 +1,16 @@
-import React, { Component } from 'react';
+import React, { PropTypes } from 'react';
 import { NavBar } from './modules/';
-import logo from './logo.svg';
-import './App.css';
 
-const App = ( {children} ) => (
+const App = ( {children, location} ) => (
     <div> 
-    <NavBar />
+    <NavBar path={location.pathname} />
     { children }
     </div>
 );
+
+App.PropTypes = {
+	children: PropTypes.element.isRequired,
+	location: PropTypes.object.isRequired
+}
 
 export default App;
