@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import { NavBar } from './modules/';
 import logo from './logo.svg';
 import './App.css';
 
-const App = () => (
+const App = ( {children} ) => (
     <div> 
-      <h1>Hello World</h1>
-      <img src={logo} className="App-logo" alt="logo" />
+    <NavBar />
+    { children }
     </div>
 );
 
