@@ -10,7 +10,7 @@ export default () => (
 			<IndexRoute component={HomeView} />
 			<Route path="/about" component={About} />
 			<Route path="/more" component={More} />
+			<Route path="*" component={Page404} />
 		</Route>
-		<Route path="*" component={Page404} />
 	</Router>
 );
