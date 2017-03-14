@@ -8,8 +8,8 @@ export default () => (
 	<Router history={history}>
 		<div>
 			<Route exact path="/" component={App} />
-			<Route path="/about" component={About} />
-			<Route path="/more" component={More} />
+			<Route path="/about" render={ () => {About} } />
+			<Route path="/more" render={ () => {More} } />
 
 			<ul>
 				<li><Link to="/">Home</Link></li>
