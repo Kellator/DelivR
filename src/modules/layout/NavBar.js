@@ -2,7 +2,7 @@ import React, { PropType } from 'react';
 import { Menu } from 'semantic-ui-react';
 import { browserHistory } from 'react-router';
 
-//stateless component for nav bar.  arrow function in onclick bind
+
 const NavBar = ({ path }) => (
 	<Menu>
 		<Menu.Menu>
@@ -21,7 +21,4 @@ const NavBar = ({ path }) => (
 	</Menu>
 );
 
-// NavBar.propTypes = {
-// 	path: PropType.string.isRequired
-// }
 export default NavBar;
