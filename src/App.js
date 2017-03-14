@@ -4,8 +4,6 @@ import { NavBar, HomeView } from './modules';
 const App = ( {children, location} ) => (
     <div> 
     	<NavBar path={location.pathname} />
-    	{ children }
-    	<HomeView />
     </div>
 );
 
