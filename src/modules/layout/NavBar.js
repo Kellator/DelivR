@@ -21,7 +21,7 @@ const NavBar = ({ path }) => (
 	</Menu>
 );
 
-NavBar.propTypes = {
-	path: PropType.string.isRequired
-}
+// NavBar.propTypes = {
+// 	path: PropType.string.isRequired
+// }
 export default NavBar;
