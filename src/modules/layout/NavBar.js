@@ -15,7 +15,7 @@ const NavBar = ({ path }) => (
 				About
 			</Menu.Item>
 			<Menu.Item active={path === '/more'} as={Link} to='/more'>
-				Item Two
+				More
 			</Menu.Item>
 		</Menu.Menu>
 	</Menu>
