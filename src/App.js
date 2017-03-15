@@ -1,10 +1,9 @@
 import React, { PropTypes } from 'react';
-import { NavBar } from './modules';
+import { NavBar, HomeView } from './modules';
 
 const App = ( {children, location} ) => (
     <div> 
-    <NavBar path={location.pathname} />
-    { children }
+    	<NavBar path={location.pathname} />
     </div>
 );
 

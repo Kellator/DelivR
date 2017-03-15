@@ -5,8 +5,8 @@ import { store } from './redux/store';
 import Routes from './Routes';
 
 render(
-	<Provider store={store}>
-		<Routes />
-	</Provider>,
-	document.getElementById('root')
+  <Provider store={store}>
+    <Routes />
+  </Provider>,
+  document.getElementById('root')
 );
