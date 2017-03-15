@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from 'semantic-ui-react';
 import { browserHistory } from 'react-router';
+import { Link } from 'react-router-dom';
 
 const styles = {
 	root: {
@@ -14,7 +15,7 @@ const styles = {
 const Page404 = () => (
 	<div style={styles.root}>
 		<h1>Page not found 404</h1>
-		<button onclick={ () => browserHistory.push("/") }>Come back</button>
+		<button as={Link} to='/'>Come back</button>
 	</div>
 );
 

@@ -11,13 +11,6 @@ export default () => (
 			<Route exact path="/" component={HomeView} />
 			<Route path="/about" component={About} />
 			<Route path="/more" component={More} />
-			<Route path="/Page404" component={Page404} />
-			<ul>
-				<li><Link to="/">Home</Link></li>
-				<li><Link to="/about">About</Link></li>
-				<li><Link to="/more">More</Link></li>
-			</ul>
-
 		</div>
 	</Router>
 );
