@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route} from 'react-router-dom';
 import { history } from './redux/store';
 import App from './App';
 import { HomeView, About, More, Page404 } from './modules';

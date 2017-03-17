@@ -1,3 +1,4 @@
 import HomeView from './HomeView';
+import Search from './search';
 
-export { HomeView };
+export { HomeView, Search };

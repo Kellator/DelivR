@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import { NavBar, HomeView } from './modules';
+import { NavBar } from './modules';
 
 const App = ( {children, location} ) => (
     <div> 
