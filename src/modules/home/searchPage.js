@@ -1,9 +1,9 @@
 import React from 'react';
 import Search from './search';
+import {connect} from 'react-redux';
 
 class SearchPage extends React.Component {
   handleSubmit = (values) => {
-    // Do something with the form values
     console.log(values);
   }
   render() {
@@ -12,4 +12,10 @@ class SearchPage extends React.Component {
     );
   }
 }
-export default SearchPage;
+const mapStateToProps = (state, props) => ({
+	search: {
+		cuisineSearch: props.cuisineSearch,
+		locationSearch: props.locationSearch
+	}
+})
+export default connect(mapStateToProps)(SearchPage);

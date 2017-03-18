@@ -14,6 +14,7 @@ const Search = (props) => {
                 <Field name="location" component="input" type="text" placeholder="City, State or Zipcode" />
             </div>
             <button type="submit" disabled={pristine || submitting}>Feed Me!</button>
+            <button type="button" disabled={pristine || submitting} onClick={reset}>Changed my mind...</button>
         </form>
     )
 }
