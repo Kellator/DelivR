@@ -4,21 +4,30 @@ import {connect} from 'react-redux';
 import * as actions from '../../redux/actions';
 
 class SearchPage extends React.Component {
-  handleSubmit = (values, actions) => {
+  handleSubmit = (values, dispatch, props) => {
     console.log(values.cuisine, values.location);
-    console.log(actions);
-    // this.props.dispatch(action.chooseCuisine(values.cuisine));
+    let cuisine = values.cuisine;
+    let location = values.location;
+    dispatch(actions.chooseCuisine(cuisine));
+    dispatch(actions.chooseLocation(location));
   }
   render() {
     return (
-      <Search onSubmit={this.handleSubmit} />
+      <Search onSubmit={this.handleSubmit}/>
     );
   }
 }
 const mapStateToProps = (state, props) => ({
-	search: {
-		cuisineSearch: state.cuisineSearch,
-		locationSearch: state.locationSearch
-	}
+    cuisine: state.cuisineSearch,
+    location: state.locationSearch
 })
-export default connect(mapStateToProps)(SearchPage);
+const mapDispatchToProps = (dispatch, ownProps) => {
+  // return {
+  //   cuisineSubmit: (values.cuisine) => {
+  //     dispatch(chooseCuisine(values.cuisine));
+  //   }
+  // }
+  console.log(ownProps);
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(SearchPage);

@@ -6,9 +6,8 @@ import * as fetchReducer from './result';
 // import * as action from './actions';
 
 export default combineReducers({
-	cuisineSearch: searchReducer.cuisineReducer,
-	locationSearch: searchReducer.locationReducer,
+	cuisine: searchReducer.cuisineReducer,
+	location: searchReducer.locationReducer,
 	form: formReducer,
     routing: routerReducer
 });
-console.log(searchReducer.cuisineReducer);
