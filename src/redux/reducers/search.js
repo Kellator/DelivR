@@ -4,12 +4,7 @@
 export function cuisineReducer(state= "", action) {
 	switch (action.type) {
 		case 'CHOOSE_CUISINE':
-		console.log(action.cuisine);
-			return Object.assign({}, ...state, {
-				search: {
-					cuisineSearch: action.cuisine
-				}
-			})
+			return action.cuisine
 		default:
 			return state;
 	}
@@ -17,12 +12,7 @@ export function cuisineReducer(state= "", action) {
 export function locationReducer(state= "", action) {
 	switch (action.type) {
 		case 'CHOOSE_LOCATION':
-		console.log(action.location)
-			return Object.assign({}, ...state, {
-				search: {
-					locationSearch: action.location
-				}
-			})
+			return action.location
 		default:
 			return state;
 	}

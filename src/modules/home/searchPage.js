@@ -21,13 +21,13 @@ const mapStateToProps = (state, props) => ({
     cuisine: state.cuisineSearch,
     location: state.locationSearch
 })
-const mapDispatchToProps = (dispatch, ownProps) => {
-  // return {
-  //   cuisineSubmit: (values.cuisine) => {
-  //     dispatch(chooseCuisine(values.cuisine));
-  //   }
-  // }
-  console.log(ownProps);
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(SearchPage);
+// const mapDispatchToProps = (dispatch, ownProps) => {
+//   // return {
+//   //   cuisineSubmit: (values.cuisine) => {
+//   //     dispatch(chooseCuisine(values.cuisine));
+//   //   }
+//   // }
+//   console.log(ownProps);
+// }
+// export default connect(mapStateToProps, mapDispatchToProps)(SearchPage);
+export default connect(mapStateToProps)(SearchPage);
