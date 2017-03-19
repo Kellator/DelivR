@@ -1,7 +1,7 @@
 // search reducers
 
 
-export function chooseCuisine(state= "", action) {
+export function cuisineReducer(state= "", action) {
 	switch (action.type) {
 		case 'CHOOSE_CUISINE':
 		console.log(action.cuisine);
@@ -14,7 +14,7 @@ export function chooseCuisine(state= "", action) {
 			return state;
 	}
 }
-export function chooseLocation(state= "", action) {
+export function locationReducer(state= "", action) {
 	switch (action.type) {
 		case 'CHOOSE_LOCATION':
 		console.log(action.location)

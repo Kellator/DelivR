@@ -1,5 +1,3 @@
-import 'isomorphic-fetch';
-import store from '../store';
 
 export const searchUrl = "https://api.yelp.com";
 
@@ -12,8 +10,8 @@ export const CHOOSE_LOCATION = 'CHOOSE_LOCATION';
 //reset app
 export const RESET_SELECTIONS = 'RESET_SELECTIONS';
 //AJAX Fetch actions
-export const IS_LOADING = 'IS_LOADING';
-export const HAS_ERRORED = 'HAS_ERRORED';
+export const ITEM_IS_LOADING = 'IS_LOADING';
+export const ITEM_HAS_ERRORED = 'HAS_ERRORED';
 export const FETCH_DATA_SUCCESS = 'FETCH_DATA_SUCCESS';
 
 
@@ -51,25 +49,25 @@ export const itemHasErrored = (bool) => ({
 export function errorAfterFiveSeconds() {
 	return(dispatch) => {
 		setTimeout(() => {
-			dispatch(hasErrored(true));
+			dispatch(itemHasErrored(true));
 		}, 5000);
 	};
 }
 export function itemsFetchData(searchUrl) {
 	return (dispatch) => {
-		dispatch(isLoading(true));
+		dispatch(itemIsLoading(true));
 
 		fetch(searchUrl)
 			.then((response) => {
 				if (!response.ok) {
 					throw Error(response.statusText);
 				}
-				dispatch(isLoading(false));
+				dispatch(itemIsLoading(false));
 				return response;
 			})
 			.then((response) => response.json())
 			.then((items) =>
-				dispatch(fetchResultsSuccess(items)))
-			.catch(() => dispatch(hasErrored(true)));
+				dispatch(fetchResultSuccess(items)))
+			.catch(() => dispatch(itemIsLoading(true)));
 	};
 }

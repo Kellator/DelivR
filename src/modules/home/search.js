@@ -18,7 +18,7 @@ const Search = (props) => {
                     <Form.Field>
                         <div>
                             <label>Location</label>
-                            <Field name="location" component="input" type="text" placeholder="City, State or Zipcode" />
+                            <Field name="location" required component="input" type="text" placeholder="City, State or Zipcode" />
                         </div>
                     </Form.Field>
                     <button type="submit" disabled={pristine || submitting}>Feed Me!</button>
