@@ -1,8 +1,6 @@
 
 export const searchUrl = "https://api.yelp.com";
 
-//action types
-
 //choose a type of food 
 export const CHOOSE_CUISINE = 'CHOOSE_CUISINE';
 //choose location
@@ -10,8 +8,8 @@ export const CHOOSE_LOCATION = 'CHOOSE_LOCATION';
 //reset app
 export const RESET_SELECTIONS = 'RESET_SELECTIONS';
 //AJAX Fetch actions
-export const ITEM_IS_LOADING = 'IS_LOADING';
-export const ITEM_HAS_ERRORED = 'HAS_ERRORED';
+export const ITEM_IS_LOADING = 'ITEM_IS_LOADING';
+export const ITEM_HAS_ERRORED = 'ITEM_HAS_ERRORED';
 export const FETCH_DATA_SUCCESS = 'FETCH_DATA_SUCCESS';
 
 
@@ -45,7 +43,6 @@ export const itemHasErrored = (bool) => ({
 	bool
 });
 //AJAX action creators (format url in const)
-
 export function errorAfterFiveSeconds() {
 	return(dispatch) => {
 		setTimeout(() => {

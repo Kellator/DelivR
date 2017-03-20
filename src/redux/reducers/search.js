@@ -17,10 +17,18 @@ export function locationReducer(state= "", action) {
 			return state;
 	}
 }
-// export function resetSelections(state=initialState, action) {
-// 	switch (action.type) {
-// 		case 'RESET_SELECTIONS': {
-// 			return initialState;
-// 		}
-// 	}
-// }
+export function resetSelections(state={}, action) {
+	switch (action.type) {
+		case 'RESET_SELECTIONS': {
+			return state;
+		}
+	}
+}
+export function isFetchingReducer(state=false, action) {
+	switch (action.type) {
+		case 'ITEM_IS_LOADING': 
+			return true;
+		default:
+			return state;
+	}
+}

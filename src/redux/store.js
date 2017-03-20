@@ -3,9 +3,11 @@ import createBrowserHistory from 'history/createBrowserHistory';
 import { syncHistoryWithStore } from 'react-router-redux';
 import logger from 'redux-logger';
 import rootReducer from './reducers';
+import thunk from 'redux-thunk';
 
 const middleware = [
-    logger()
+    logger(),
+    thunk
 ];
 
 const enhancers = compose(
