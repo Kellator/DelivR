@@ -1,26 +1,38 @@
-import React from 'react';
-import {Button, Form, Grid} from 'semantic-ui-react';
-import {Field, reduxForm } from 'redux-form';
-// search component - cuisineSearch and locationSearch input fields
+import React, { Component } from 'react';
+import { Field, reduxForm } from 'redux-form';
+import { Grid, Form } from 'semantic-ui-react';
 
-const Search = () => (
-    <Grid centered>
-        <Grid.Column width={6}>
-            <Form>
-                <Form.Field>
-                    <label>I'm Hungry For...</label>
-                    <input type="text" placeholder="Chinese"/>
-                </Form.Field>
-                <Form.Field>
-                    <label>Location</label>
-                    <input type="text" placeholder="City, State or Zipcode"/>
-                </Form.Field>
-                <Form.Button type="submit">Feed Me!</Form.Button>
-            </Form>
-        </Grid.Column>
-    </Grid>
-);
+const Search = (props) => {
+    const { handleSubmit, pristine, reset, submitting } = props
+    return (
+        <Grid centered >
+            <Grid.Column width={6}>
+                <Form>
+                <form onSubmit={handleSubmit} className="search-form">
+                    <Form.Field>
+                        <div >
+                            <label>I'm Hungry For...</label>
+                            <Field name="cuisine" component="input" type="text" placeholder="Chinese" />
+                        </div>
+                    </Form.Field>
+                    <Form.Field>
+                        <div>
+                            <label>Location</label>
+                            <Field name="location" required component="input" type="text" placeholder="City, State or Zipcode" />
+                        </div>
+                    </Form.Field>
+                    <button type="submit" disabled={pristine || submitting}>Feed Me!</button>
+                    <button type="button" disabled={pristine || submitting} onClick={reset}>Changed my mind...</button>
+                </form>
+                </Form>
+            </Grid.Column>
+        </Grid>
+    )
+}
 Search = reduxForm({
     form:'search'
 })(Search);
+
 export default Search;
+
+

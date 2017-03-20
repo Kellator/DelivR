@@ -1,12 +1,12 @@
 import { combineReducers } from 'redux';
 import { routerReducer } from 'react-router-redux';
 import { reducer as formReducer } from 'redux-form';
-import { Search } from './search';
-import { ReturnResults } from './return';
+import { cuisineReducer as cuisine, locationReducer as location, isFetchingReducer as fetching } from './search';
 
 export default combineReducers({
-	searchResults: Search,
-	restaurantResults: ReturnResults,
+	cuisine,
+	location,
+	fetching,
 	form: formReducer,
     routing: routerReducer
 });
