@@ -8,7 +8,7 @@ export default () => (
 	<Router history={history}>
 		<div>
 			<Route path="/" component={App} />
-			<Route path="/" component={HomeView} />
+			<Route  exact path="/" component={HomeView} />
 			<Route path="/about" component={About} />
 			<Route path="/more" component={More} />
 		</div>
