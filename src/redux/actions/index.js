@@ -1,6 +1,6 @@
-
-export const searchUrl = "https://api.yelp.com";
-
+import fetch from 'isomorphic-fetch';
+// action constants
+export const searchUrl = "https://api.yelp.com/v3/transactions/delivery/search?location=";
 //choose a type of food 
 export const CHOOSE_CUISINE = 'CHOOSE_CUISINE';
 //choose location
@@ -50,9 +50,16 @@ export function errorAfterFiveSeconds() {
 		}, 5000);
 	};
 }
-export function itemsFetchData(searchUrl) {
+// fetch request url setup 
+// https://api.yelp.com/v3/transactions/delivery/search?location={location from input}&categories={cuisine from input}
+// define urls as constants prior to functions to access in the functions - variables will be received from state.
+// Access token should be saved into state object
+
+export function itemsFetchData(cuisine, location) {
 	return (dispatch) => {
 		dispatch(itemIsLoading(true));
+// if key present - perform fetch, else request key, then perform fetch
+// access token url = https://api.yelp.com/oauth2/token
 
 		fetch(searchUrl)
 			.then((response) => {

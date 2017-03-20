@@ -2,6 +2,7 @@ import React from 'react';
 import Search from './search';
 import {connect} from 'react-redux';
 import * as actions from '../../redux/actions';
+import { reset } from 'redux-form';
 
 // container component to connect to redux, dispatch actions, and define handleSubmit 
 
@@ -14,9 +15,12 @@ class SearchPage extends React.Component {
     dispatch(actions.chooseLocation(location));
     dispatch(actions.itemsFetchData(cuisine, location));
   }
+  pickles = (dispatch, props) => {
+
+  }
   render() {
     return (
-      <Search onSubmit={this.handleSubmit} />
+      <Search onSubmit={this.handleSubmit} pickles={this.pickles}/>
     );
   }
 }
