@@ -2,7 +2,9 @@ import React from 'react';
 import Search from './search';
 import {connect} from 'react-redux';
 import * as actions from '../../redux/actions';
+
 // container component to connect to redux, dispatch actions, and define handleSubmit 
+
 class SearchPage extends React.Component {
   handleSubmit = (values, dispatch, props) => {
     console.log(values.cuisine, values.location);
