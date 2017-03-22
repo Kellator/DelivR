@@ -19,15 +19,14 @@ const enhancers = compose(
  * CREATE STORE
  */
 let initialState = {
-    search: {
-        cuisineSearch: "",
-        locationSearch: ""
-    },
-    restaurantResults: []
+    cuisine: "",
+    location: "",
+    fetching: false,
+    token: ""
 };
 let store = createStore(
     rootReducer,
-    {},
+    initialState,
     enhancers
 );
 
