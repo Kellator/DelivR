@@ -1,4 +1,10 @@
-// search reducers
+const initialState = {
+    cuisine: "",
+    location: "",
+    fetching: false,
+    token: ""
+};
+console.log(initialState);
 
 // saves type of cuisine to state - dispatched on submit
 export function cuisineReducer(state = "", action) {
@@ -19,13 +25,13 @@ export function locationReducer(state = "", action) {
 	}
 }
 // resets search criteria 
-export function resetSelections(state = {}, action) {
-	switch (action.type) {
-		case 'RESET_SELECTIONS': {
-			return state;
-		}
-	}
-}
+// export function resetSelections(state = {}, action) {
+// 	switch (action.type) {
+// 		case 'RESET_SELECTIONS': {
+// 			return state;
+// 		}
+// 	}
+// }
 // dispatched from inside fetch request
 // export function itemIsLoading(state = false, action) {
 // 	switch (action.type) {
@@ -45,7 +51,7 @@ export function resetSelections(state = {}, action) {
 // 			return state;
 // 	}
 // }
-export function tokenReducer(state = {}, action) {
+export function tokenReducer(state = initialState, action) {
 	switch (action.type) {
 		case 'TOKEN_RETRIEVED':
 			return action.accessToken;
@@ -54,14 +60,22 @@ export function tokenReducer(state = {}, action) {
 	}
 }
 // fires on submit - needs to handle fetching, success, error
-export function fetchingReducer(state = {}, action) {
+export function fetchingReducer(state = initialState, action) {
 	switch (action.type) {
 		case 'ITEM_IS_LOADING': 
-			return action.true;
+			return Object.assign({}, state,{fetching: true});
 		case 'ITEM_HAS_ERRORED':
-			return action.false;
+			return Object.assign({}, state,{fetching: false});
 		case 'FETCH_DATA_SUCCESS':
-			return action.results;
+			return Object.assign({}, state,{restaurantResults: []});
+		default:
+			return state;
+	}
+}
+export function returnResultsReducer(state = initialState, action) {
+	switch (action.type) {
+		case 'RETURN_RESULTS':
+			return state;
 		default:
 			return state;
 	}

@@ -18,7 +18,7 @@ const enhancers = compose(
 /**
  * CREATE STORE
  */
-let initialState = {
+export const initialState = {
     cuisine: "",
     location: "",
     fetching: false,

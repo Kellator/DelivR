@@ -12,7 +12,7 @@ export const ITEM_IS_LOADING = 'ITEM_IS_LOADING';
 export const ITEM_HAS_ERRORED = 'ITEM_HAS_ERRORED';
 export const FETCH_DATA_SUCCESS = 'FETCH_DATA_SUCCESS';
 export const TOKEN_RETRIEVED = 'TOKEN_RETRIEVED';
-
+export const RETURN_RESULTS = 'RETURN_RESULTS';
 
 //actions creators
 //choose type of cuisine for search
@@ -34,17 +34,21 @@ export const itemIsLoading = (bool) => ({
 	type: ITEM_IS_LOADING,
 	bool
 });
-export const fetchResultSuccess = (results) => ({
+export const fetchResultSuccess = (success) => ({
 	type: FETCH_DATA_SUCCESS,
-	results
+	success
 });
-export const itemHasErrored = (bool) => ({
+export const itemHasErrored = (error) => ({
 	type: ITEM_HAS_ERRORED,
-	bool
+	error
 });
 export const tokenRetrieved = accessToken => ({
 	type: TOKEN_RETRIEVED,
 	accessToken
+})
+export const returnResults = (results) => ({
+	type: RETURN_RESULTS,
+	results
 })
 //AJAX action creators (format url in const)
 export function errorAfterFiveSeconds() {
@@ -67,12 +71,6 @@ let searchCuisine = "categories=" + cuisine;
 let searchUrl = "https://api.yelp.com/v3/transactions/delivery/search?" + 
 searchLocation + searchCuisine;
 
-// returns access token
-// const tokenHeaders = new Headers();
-// tokenHeaders.append("grant_type", "client_credentials");
-// tokenHeaders.append("client_id", "F1GjwxdHmDgOyEQnFkrOdg");
-// tokenHeaders.append("client_secret", "6VupwbF7anbAd8yHZYbl9CDDQDFzzmORu2al1E3JkqaI1HSvGEqFSLT6M8VDpLZp");
-
 const tokenData = new FormData();
 tokenData.append("grant_type", "client_credentials");
 tokenData.append("client_id", "F1GjwxdHmDgOyEQnFkrOdg");
@@ -83,20 +81,22 @@ const accessTokenParams = {
 	body: tokenData
 }
 
-const fetchAccessToken = (dispatch) => {
-	fetch(tokenUrl, accessTokenParams)
-	.then(response => {
-		if (!response.ok) {
-			const error = new Error(response.statusText)
-			error.response = response
-			throw error;
-		}
-		console.log(response);
-		dispatch(tokenRetrieved(accessToken));
-	// store results in state
-	//dispatch separate action to update state	
-		
-	})
+const fetchAccessToken = () => {
+	return (dispatch) => {
+		dispatch(itemIsLoading(true));
+		return fetch(tokenUrl, accessTokenParams)
+			.then(response => {
+				console.log("response");
+				return response.json();
+			})
+	// 		.then(json => { console.log(response.json);
+	// 			// let accessToken = response.access_token; 
+	// 			// dispatch(tokenRetrieved(accessToken))
+	// // store results in state
+	// //dispatch separate action to update state			
+	// 	})	
+	}
+
 };
 // API Search
 const apiHeaders = new Headers();
@@ -112,7 +112,7 @@ const apiSearchParams = {
 	body: apiData
 }
 
-const fetchApiResults = (accessToken) => {
+const fetchApiResults = () => {
 	fetch(searchUrl, apiSearchParams)
 	.then(response => {
 		if (!response.ok) {
@@ -122,31 +122,16 @@ const fetchApiResults = (accessToken) => {
 		}
 		console.log("api results");
 		console.log(response);
-		// dispatch(itemIsLoading(false));
+		// dispatch(fetchApiResults(accessToken));		
 		return response;
 	})
 };
-export function itemsFetchData(cuisine, location) {
-	return (dispatch) => {
+// add if statement for access token => api fetch request
+export const itemsFetchData = (cuisine, location) => {
+	console.log("ItemsFetchData");
+	return (dispatch) => { 
+		console.log("return fetch data");
 		dispatch(itemIsLoading(true));
-		// if token is not present =>
 		dispatch(fetchAccessToken(dispatch));
-		// if token is present =>
-		dispatch(fetchApiResults(accessToken))
-	// 	.then(response => {
-	// 	if (!response.ok) {
-	// 		const error = new Error(response.statusText)
-	// 		error.response = response
-	// 		throw error;
-	// 	}
-	// 	// dispatch(itemIsLoading(false));
-	// 	return response;
-	// })
-	// .then(response => response.json())
-	// .then(results =>
-	// 	dispatch(fetchResultSuccess(results)))
-	// .catch(Error => 
-	// 	dispatch(itemIsLoading(true))
-	// );
 	};
 }
