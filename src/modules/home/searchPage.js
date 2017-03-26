@@ -13,7 +13,8 @@ class SearchPage extends React.Component {
     let location = values.location;
     dispatch(actions.chooseCuisine(cuisine));
     dispatch(actions.chooseLocation(location));
-    dispatch(actions.itemsFetchData(cuisine, location));
+    dispatch(actions.asyncRequest(cuisine, location));
+    dispatch(actions.asyncApiRequest(cuisine, location));
   }
   pickles = (dispatch, props) => {
 

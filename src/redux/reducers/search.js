@@ -54,7 +54,9 @@ export function locationReducer(state = "", action) {
 export function tokenReducer(state = initialState, action) {
 	switch (action.type) {
 		case 'TOKEN_RETRIEVED':
-			return action.accessToken;
+			return "token";
+		case 'TOKEN_FAILED':
+			return state;
 		default: 
 			return state;
 	}
@@ -63,11 +65,11 @@ export function tokenReducer(state = initialState, action) {
 export function fetchingReducer(state = initialState, action) {
 	switch (action.type) {
 		case 'ITEM_IS_LOADING': 
-			return Object.assign({}, state,{fetching: true});
+			return true;
 		case 'ITEM_HAS_ERRORED':
-			return Object.assign({}, state,{fetching: false});
+			return false
 		case 'FETCH_DATA_SUCCESS':
-			return Object.assign({}, state,{restaurantResults: []});
+			return false;
 		default:
 			return state;
 	}
@@ -80,12 +82,15 @@ export function returnResultsReducer(state = initialState, action) {
 			return state;
 	}
 }
-
-// export function restaurantResults(state={}, action) {
-// 	switch(action.type) {
-// 		case 'FETCH_DATA_SUCCESS':
-// 			return  state;
-// 		default:
-// 			return state;
-// 	}
-// }
+export function fetchRequestReducer(state = initialState, action) {
+	switch(action.type) {
+		case 'FETCH_REQUEST':
+			return true;
+		case 'FETCH_SUCCESS':
+			return false;
+		case 'FETCH_ERROR':
+			return false;
+		default:
+			return state;
+	}
+}

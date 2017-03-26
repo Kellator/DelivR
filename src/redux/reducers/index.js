@@ -6,7 +6,7 @@ import * as reducers from './search';
 export default combineReducers({
 	cuisine: reducers.cuisineReducer,
 	location: reducers.locationReducer,
-	// fetching: reducers.fetchingReducer,
+	fetching: reducers.fetchRequestReducer,
 	token: reducers.tokenReducer,
 	form: formReducer,
     routing: routerReducer
