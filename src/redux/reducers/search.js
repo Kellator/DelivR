@@ -54,7 +54,7 @@ export function locationReducer(state = "", action) {
 export function tokenReducer(state = initialState, action) {
 	switch (action.type) {
 		case 'TOKEN_RETRIEVED':
-			return "token";
+			return Object.assign({}, state, {token: action.response});
 		case 'TOKEN_FAILED':
 			return state;
 		default: 
@@ -62,26 +62,26 @@ export function tokenReducer(state = initialState, action) {
 	}
 }
 // fires on submit - needs to handle fetching, success, error
-export function fetchingReducer(state = initialState, action) {
-	switch (action.type) {
-		case 'ITEM_IS_LOADING': 
-			return true;
-		case 'ITEM_HAS_ERRORED':
-			return false
-		case 'FETCH_DATA_SUCCESS':
-			return false;
-		default:
-			return state;
-	}
-}
-export function returnResultsReducer(state = initialState, action) {
-	switch (action.type) {
-		case 'RETURN_RESULTS':
-			return state;
-		default:
-			return state;
-	}
-}
+// export function fetchingReducer(state = initialState, action) {
+// 	switch (action.type) {
+// 		case 'ITEM_IS_LOADING': 
+// 			return true;
+// 		case 'ITEM_HAS_ERRORED':
+// 			return false
+// 		case 'FETCH_DATA_SUCCESS':
+// 			return false;
+// 		default:
+// 			return state;
+// 	}
+// }
+// export function returnResultsReducer(state = initialState, action) {
+// 	switch (action.type) {
+// 		case 'RETURN_RESULTS':
+// 			return state;
+// 		default:
+// 			return state;
+// 	}
+// }
 export function fetchRequestReducer(state = initialState, action) {
 	switch(action.type) {
 		case 'FETCH_REQUEST':

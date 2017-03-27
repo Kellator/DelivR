@@ -70,13 +70,13 @@ export const fetchRequest = (bool) => ({
 	bool
 })
 //AJAX action creators (format url in const)
-export function errorAfterFiveSeconds() {
-	return(dispatch) => {
-		setTimeout(() => {
-			dispatch(itemHasErrored(true));
-		}, 5000);
-	};
-}
+// export function errorAfterFiveSeconds() {
+// 	return(dispatch) => {
+// 		setTimeout(() => {
+// 			dispatch(itemHasErrored(true));
+// 		}, 5000);
+// 	};
+// }
 // fetch request url setup 
 let cuisine;
 let location;
@@ -87,92 +87,141 @@ let searchCuisine = "categories=" + cuisine;
 let searchUrl = "https://api.yelp.com/v3/transactions/delivery/search?" + 
 searchLocation + searchCuisine;
 
+const tokenHeaders = new Headers();
+tokenHeaders.append("grant_type", "client_credentials");
+tokenHeaders.append("client_id", "F1GjwxdHmDgOyEQnFkrOdg");
+tokenHeaders.append("client_secret", "6VupwbF7anbAd8yHZYbl9CDDQDFzzmORu2al1E3JkqaI1HSvGEqFSLT6M8VDpLZp");
+
 const tokenData = new FormData();
 tokenData.append("grant_type", "client_credentials");
 tokenData.append("client_id", "F1GjwxdHmDgOyEQnFkrOdg");
 tokenData.append("client_secret", "6VupwbF7anbAd8yHZYbl9CDDQDFzzmORu2al1E3JkqaI1HSvGEqFSLT6M8VDpLZp");
 
-const accessTokenParams = {
-	method: 'POST',
-	body: tokenData
-}
-
-const fetchAccessToken = () => {
-	return dispatch => {
-		fetch(tokenUrl, accessTokenParams)
-			.then(response => {
-				dispatch(tokenRetrieved(response))
-				return response;
-			})
-	}	
-};
+// const fetchAccessToken = () => {
+// 	return dispatch => {
+// 		fetch(tokenUrl, accessTokenParams)
+// 			.then(response => {
+// 				dispatch(tokenRetrieved(response))
+// 				return response;
+// 			})
+// 	}	
+// };
 // API Search
 const apiHeaders = new Headers();
 apiHeaders.append("authorization", "Bearer" + accessToken);
 apiHeaders.append("terms", "delivery");
 
 const apiData = new FormData();
-apiData.append("authorization", "Bearer" + accessToken);
+apiData.append("authorization", "Bearer " + accessToken);
 apiData.append("terms", "delivery");
 
 const apiSearchParams = {
 	credentials: "include",
 	method: 'get',
-	body: apiData
+	Headers: apiHeaders
 }
 
-const fetchApiResults = () => {
-	fetch(searchUrl, apiSearchParams)
-	.then(response => {
-		if (!response.ok) {
-			const error = new Error(response.statusText)
-			error.response = response
-			throw error;
-		}	
-		return response;
-	})
-};
-// add if statement for access token => api fetch request
-export const itemsFetchData = (cuisine, location) => {
-	console.log("ItemsFetchData");
-	return (dispatch) => { 
-		dispatch(itemIsLoading(true))
-		console.log("loading")
-		dispatch(fetchAccessToken())
-		console.log("fetched")
-	};
-}
+// const fetchApiResults = () => {
+// 	fetch(searchUrl, apiSearchParams)
+// 	.then(response => {
+// 		if (!response.ok) {
+// 			const error = new Error(response.statusText)
+// 			error.response = response
+// 			throw error;
+// 		}	
+// 		return response;
+// 	})
+// };
+// // add if statement for access token => api fetch request
+// export const itemsFetchData = (cuisine, location) => {
+// 	console.log("ItemsFetchData");
+// 	return (dispatch) => { 
+// 		dispatch(itemIsLoading(true))
+// 		console.log("loading")
+// 		dispatch(fetchAccessToken())
+// 		console.log("fetched")
+// 	};
+// }
 const accessToken = 'mSPASmpGt7DDCawJreXm4y4musQYZ1lAeFM7W0hCfIpA_WUuAEXuNdM43s5J11VkcOmZ8NrKBLYnRd6KVzKdQjXhHHvBuNHTju15uP8LLNpTH7IdU5NB_MVFQUe2WHYx'
-export const asyncRequest = () => {
+export const asyncRequest = (cuisine, location, accessToken) => {
 	console.log("new async attempt");
 	return dispatch => {
-		dispatch(fetchRequest(true))
-		return fetch(tokenUrl, accessTokenParams).then(
-			response => {
-				dispatch(fetchSuccess(false))
+		const accessTokenParams = {
+	method: 'POST',
+	body: tokenData,
+	success: response => {
+				debugger;
 				console.log(response)
-			},
-			error => {
-				dispatch(fetchError(false))
-				throw error
+				if(response.ok) {
+					dispatch(fetchSuccess(false))
+					dispatch(tokenRetrieved(response))
+					dispatch(asyncApiRequest(cuisine, location, accessToken))
+					console.log(response.blob())
+					console.log("all is well")
+					return response					
+				}
+				else {
+					console.log("I'm an error")
+					error => {
+					dispatch(fetchError(false))
+					throw error
+					}
+				}
+			}
+}
+		dispatch(fetchRequest(true));
+		var myRequest = new Request(tokenUrl, accessTokenParams);
+		fetch(myRequest).then(
+			response => { return response.json() }).then(
+			response => {
+				debugger;
+				console.log(response)
+				if(response.ok) {
+					dispatch(fetchSuccess(false))
+					dispatch(tokenRetrieved(response))
+					dispatch(asyncApiRequest(cuisine, location, accessToken))
+					console.log(response.blob())
+					console.log("all is well")
+					return response					
+				}
+				else {
+					console.log("I'm an error")
+					error => {
+					dispatch(fetchError(false))
+					throw error
+					}
+				}
 			}
 		)
 	}
 }
-
+// const fetchAccessToken = () => {
+// 	return dispatch => {
+// 		fetch(tokenUrl, accessTokenParams)
+// 			.then(response => {
+// 				dispatch(tokenRetrieved(response))
+// 				return response;
+// 			})
 export const asyncApiRequest = (cuisine, location, accessToken) => {
 	console.log("api request");
 	return dispatch => {
 		dispatch(fetchRequest(true))
-		return fetch(searchUrl, apiSearchParams).then(
+		fetch(searchUrl, apiSearchParams).then(
 			response => {
-				dispatch(fetchSuccess(false))
-				console.log(response)
+				if(response.ok) {
+					dispatch(fetchSuccess(false))
+					console.log(response)
+					console.log("all is well")
+					return response					
+				}
+				else {
+					console.log("I'm an error")
+					error => {
+					dispatch(fetchError(false))
+					throw error
+					}
+				}
 			},
-			error => {
-				dispatch(fetchError(false))
-				throw error
-			}
 		)
 	}
 }
