@@ -15,12 +15,9 @@ class SearchPage extends React.Component {
     this.props.chooseLocation(location);
     this.props.asyncRequest(cuisine, location);
   }
-  pickles = (dispatch, props) => {
-
-  }
   render() {
     return (
-      <Search onSubmit={this.handleSubmit} pickles={this.pickles}/>
+      <Search onSubmit={this.handleSubmit}/>
     );
   }
 }
