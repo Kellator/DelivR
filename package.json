@@ -4,6 +4,8 @@
   "private": true,
   "homepage": "https://kellator.github.io/delivr-react-app/",
   "dependencies": {
+    "axios": "^0.15.3",
+    "axios-debug": "0.0.4",
     "history": "^4.6.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
@@ -14,7 +16,8 @@
     "redux-form": "^6.5.0",
     "redux-logger": "^2.8.2",
     "redux-thunk": "^2.2.0",
-    "semantic-ui-react": "^0.67.1"
+    "semantic-ui-react": "^0.67.1",
+    "url-search-params": "^0.7.0"
   },
   "devDependencies": {
     "babel-core": "^6.24.0",

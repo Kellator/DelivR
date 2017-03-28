@@ -1,4 +1,8 @@
 import fetch from 'isomorphic-fetch';
+import axios from 'axios';
+require('axios-debug')(axios);
+axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+import URLSearchParams from 'url-search-params';
 // action constants
 // let searchUrl = "https://api.yelp.com/v3/transactions/delivery/search?";
 //choose a type of food 
@@ -65,9 +69,8 @@ export const fetchError = (bool) => ({
 	type: FETCH_ERROR,
 	bool
 })
-export const fetchRequest = (bool) => ({
+export const fetchRequest = () => ({
 	type: FETCH_REQUEST,
-	bool
 })
 //AJAX action creators (format url in const)
 // export function errorAfterFiveSeconds() {
@@ -143,58 +146,77 @@ const apiSearchParams = {
 // 	};
 // }
 const accessToken = 'mSPASmpGt7DDCawJreXm4y4musQYZ1lAeFM7W0hCfIpA_WUuAEXuNdM43s5J11VkcOmZ8NrKBLYnRd6KVzKdQjXhHHvBuNHTju15uP8LLNpTH7IdU5NB_MVFQUe2WHYx'
-export const asyncRequest = (cuisine, location, accessToken) => {
-	console.log("new async attempt");
+export const asyncRequest = (cuisine, location) => {
 	return dispatch => {
-		const accessTokenParams = {
-	method: 'POST',
-	body: tokenData,
-	success: response => {
-				debugger;
-				console.log(response)
-				if(response.ok) {
-					dispatch(fetchSuccess(false))
-					dispatch(tokenRetrieved(response))
-					dispatch(asyncApiRequest(cuisine, location, accessToken))
-					console.log(response.blob())
-					console.log("all is well")
-					return response					
-				}
-				else {
-					console.log("I'm an error")
-					error => {
-					dispatch(fetchError(false))
-					throw error
-					}
-				}
-			}
-}
-		dispatch(fetchRequest(true));
-		var myRequest = new Request(tokenUrl, accessTokenParams);
-		fetch(myRequest).then(
-			response => { return response.json() }).then(
-			response => {
-				debugger;
-				console.log(response)
-				if(response.ok) {
-					dispatch(fetchSuccess(false))
-					dispatch(tokenRetrieved(response))
-					dispatch(asyncApiRequest(cuisine, location, accessToken))
-					console.log(response.blob())
-					console.log("all is well")
-					return response					
-				}
-				else {
-					console.log("I'm an error")
-					error => {
-					dispatch(fetchError(false))
-					throw error
-					}
-				}
-			}
-		)
+		dispatch(fetchRequest())
+		var params = new URLSearchParams();
+		params.append("client_id", "F1GjwxdHmDgOyEQnFkrOdg");
+		params.append("client_secret", "6VupwbF7anbAd8yHZYbl9CDDQDFzzmORu2al1E3JkqaI1HSvGEqFSLT6M8VDpLZp");
+		params.append("grant_type", "client_credentials");
+		return axios.post(`${tokenUrl}?client_id=F1GjwxdHmDgOyEQnFkrOdg&client_secret=6VupwbF7anbAd8yHZYbl9CDDQDFzzmORu2al1E3JkqaI1HSvGEqFSLT6M8VDpLZp&grant_type=client_credentials`)
+			.then(res => {
+				return dispatch({type: 'LOL'});
+				console.log("hello");
+				console.log(res.data);
+				console.log(res);
+			})
+			.catch(error => console.log({error}));
 	}
 }
+// export const asyncRequest = (cuisine, location) => {
+// 	console.log("new async attempt");
+// 	return dispatch => {
+// 		const accessTokenParams = {
+// 			method: 'POST',
+// 			body: tokenData,
+// 			success: response => {
+// 						debugger;
+// 						console.log(response)
+// 						if(response.ok) {
+// 							dispatch(fetchSuccess(false))
+// 							dispatch(tokenRetrieved(response))
+// 							dispatch(asyncApiRequest(cuisine, location, accessToken))
+// 							console.log(response.blob())
+// 							console.log("all is well")
+// 							return response					
+// 						}
+// 						else {
+// 							console.log("I'm an error")
+// 							error => {
+// 							dispatch(fetchError(false))
+// 							throw error
+// 							}
+// 						}
+// 					}
+// 		}
+// 		console.log("line 171 log");
+// 		dispatch(fetchRequest(true));
+// 		return fetch(tokenUrl, accessTokenParams)
+// 		.then(response => { return response.json() })
+// 		.then(response => {
+// 				debugger;
+// 				console.log(response)
+// 				if(response.ok) {
+// 					dispatch(fetchSuccess(false))
+// 					dispatch(tokenRetrieved(response))
+// 					dispatch(asyncApiRequest(cuisine, location, accessToken))
+// 					console.log(response.blob())
+// 					console.log("all is well")
+// 					return response					
+// 				}
+// 				else {
+// 					console.log("I'm an error")
+// 					error => {
+// 					dispatch(fetchError(false))
+// 					throw error
+// 					}
+// 				}
+// 			}
+// 		).catch(function(error) {
+// 			console.log('there has been a problem with your fetch operation: ' + error.message);
+// 		});
+// 	}
+// }
 // const fetchAccessToken = () => {
 // 	return dispatch => {
 // 		fetch(tokenUrl, accessTokenParams)
