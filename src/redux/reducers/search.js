@@ -51,16 +51,16 @@ export function locationReducer(state = "", action) {
 // 			return state;
 // 	}
 // }
-export function tokenReducer(state = initialState, action) {
-	switch (action.type) {
-		case 'TOKEN_RETRIEVED':
-			return Object.assign({}, state, {token: action.response});
-		case 'TOKEN_FAILED':
-			return state;
-		default: 
-			return state;
-	}
-}
+// export function tokenReducer(state = initialState, action) {
+// 	switch (action.type) {
+// 		case 'TOKEN_RETRIEVED':
+// 			return Object.assign({}, state, {token: action.response});
+// 		case 'TOKEN_FAILED':
+// 			return state;
+// 		default: 
+// 			return state;
+// 	}
+// }
 // fires on submit - needs to handle fetching, success, error
 // export function fetchingReducer(state = initialState, action) {
 // 	switch (action.type) {
