@@ -8,7 +8,7 @@ const Search = (props) => {
         <Grid centered >
             <Grid.Column width={6}>
                 <Form>
-                <form onSubmit={handleSubmit} className="search-form">
+                <form onSubmit={handleSubmit(props.onSubmit)} className="search-form">
                     <Form.Field>
                         <div >
                             <label>I'm Hungry For...</label>

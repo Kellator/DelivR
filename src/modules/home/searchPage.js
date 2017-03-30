@@ -7,20 +7,17 @@ import { reset } from 'redux-form';
 // container component to connect to redux, dispatch actions, and define handleSubmit 
 
 class SearchPage extends React.Component {
-  handleSubmit = (values, dispatch, props) => {
+  handleSubmit = (values) => {
     console.log(values.cuisine, values.location);
     let cuisine = values.cuisine;
     let location = values.location;
-    dispatch(actions.chooseCuisine(cuisine));
-    dispatch(actions.chooseLocation(location));
-    dispatch(actions.itemsFetchData(cuisine, location));
-  }
-  pickles = (dispatch, props) => {
-
+    this.props.chooseCuisine(cuisine);
+    this.props.chooseLocation(location);
+    this.props.asyncRequest(cuisine, location);
   }
   render() {
     return (
-      <Search onSubmit={this.handleSubmit} pickles={this.pickles}/>
+      <Search onSubmit={this.handleSubmit}/>
     );
   }
 }
@@ -29,4 +26,4 @@ const mapStateToProps = (state, props) => ({
     location: state.locationSearch
 })
 
-export default connect(mapStateToProps)(SearchPage);
+export default connect(mapStateToProps, { chooseCuisine: actions.chooseCuisine, chooseLocation: actions.chooseCuisine, asyncRequest: actions.asyncRequest })(SearchPage);
