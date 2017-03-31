@@ -86,12 +86,8 @@ tokenData.append("client_secret", "6VupwbF7anbAd8yHZYbl9CDDQDFzzmORu2al1E3JkqaI1
 
 export const asyncRequest = (cuisine, location) => {
 	return dispatch => {
-		dispatch(fetchRequest())
-		let params = new URLSearchParams();
-		params.append("client_id", "F1GjwxdHmDgOyEQnFkrOdg");
-		params.append("client_secret", "6VupwbF7anbAd8yHZYbl9CDDQDFzzmORu2al1E3JkqaI1HSvGEqFSLT6M8VDpLZp");
-		params.append("grant_type", "client_credentials");
-		return axios.post(tokenUrl, params)
+		dispatch(fetchRequest()) // make fetch to 'localhost'  in production do to hosted site
+		return axios.post('http://localhost:3030/login')
 			.then(res => {
 				console.log("hello");
 				console.log(res.data);
