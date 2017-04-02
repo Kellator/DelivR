@@ -24,6 +24,16 @@ export function locationReducer(state = "", action) {
 	}
 }
 
+export function accessReducer(state = {}, action) {
+	switch(action.type) {
+		case 'SAVE_ACCESS':
+			return Object.assign({}, state, {
+				access : action.accessData
+			});
+		default: 
+			return state;
+	}
+}
 export function fetchRequestReducer(state = initialState, action) {
 	switch(action.type) {
 		case 'FETCH_REQUEST':

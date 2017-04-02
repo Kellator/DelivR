@@ -7,6 +7,7 @@ export default combineReducers({
 	cuisine: reducers.cuisineReducer,
 	location: reducers.locationReducer,
 	fetching: reducers.fetchRequestReducer,
+	access: reducers.accessReducer,
 	form: formReducer,
     routing: routerReducer
 });

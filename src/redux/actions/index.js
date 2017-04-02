@@ -6,10 +6,12 @@ axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
 axios.defaults.headers.post['Access-Control-Allow-Methods'] = 'PUT, GET, POST, DELETE, OPTIONS';
 axios.defaults.headers.post['Access-Control-Allow-Headers'] = 'accept, content-type, x-parse-application-id, x-parse-rest-api-key, x-parse-session-token';
 
+// axios.defaults.headers.get['Access-Control-Allow-Origin'] = '*';
+// axios.defaults.headers.get['Access-Control-Allow-Methods'] = 'PUT, GET, POST, DELETE, OPTIONS';
+// axios.defaults.headers.get['Access-Control-Allow-Headers'] = 'accept, content-type, x-parse-application-id, x-parse-rest-api-key, x-parse-session-token';
 import URLSearchParams from 'url-search-params';
-// const yelp = require('yelp-fusion');
-// action constants
-// let searchUrl = "https://api.yelp.com/v3/transactions/delivery/search?";
+const searchUrl = 'https://api.yelp.com/v3/transactions/delivery/search';
+
 //choose a type of food 
 export const CHOOSE_CUISINE = 'CHOOSE_CUISINE';
 //choose location
@@ -21,6 +23,7 @@ export const FETCH_SUCCESS = 'FETCH_SUCCESS';
 export const FETCH_ERROR = 'FETCH_ERROR';
 export const FETCH_REQUEST = 'FETCH_REQUEST';
 
+export const SAVE_ACCESS = 'SAVE_ACCESS';
 //actions creators
 //choose type of cuisine for search
 export const chooseCuisine = cuisine => ({ 
@@ -33,10 +36,10 @@ export const chooseLocation = location => ({
 	location
 });
 //reset search
-export const resetSelections = selections => ({
-	type: RESET_SELECTIONS,
-	selections
-});
+export const saveAccess = (accessData) => ({
+	type: SAVE_ACCESS,
+	accessData
+})
 export const fetchSuccess = (bool) => ({
 	type: FETCH_SUCCESS,
 	bool
@@ -49,18 +52,51 @@ export const fetchRequest = () => ({
 	type: FETCH_REQUEST,
 });
 
-// let cuisine;
-// let location;
-
 // make fetch to 'localhost'  in production do to hosted site
 export const asyncRequest = (cuisine, location) => {
 	return dispatch => {
 		dispatch(fetchRequest()) 
 		return axios.post('http://localhost:3030/login')
 			.then(res => {
+				dispatch(fetchSuccess())
+				let accessToken = res.data.access_token;
+				let expiresIn = res.data.expires_in;
+				let tokenType = res.data.token_type;
 				console.log("hello");
 				console.log(res.data);
 				console.log(res);
+				console.log(accessToken);
+				console.log(expiresIn);
+				console.log(tokenType);
+				console.log(cuisine);
+				console.log(location);
+				let auth = tokenType + ' ' + accessToken;
+				console.log(auth);
+				dispatch(fetchRequest())
+				console.log(searchUrl); 
+				return axios.get('http://localhost:3030/login')
+					.then(res => {
+						dispatch(fetchSuccess())
+						console.log('second hello');
+						console.log(res.data);
+						console.log(res);
+					})
+				// return axios.get(searchUrl, {
+				// 	params : {
+				// 		'location' : location,
+				// 		'categories' : cuisine
+				// 	},
+				// 	headers : {
+				// 		'Access-Control-Allow-Origin' : '*',
+				// 		'Authorization' : auth
+				// 	}
+				// })
+				// 	.then(res => {
+					// dispatch(fetchSuccess())
+				// 		console.log('second hello');
+				// 		console.log(res.data);
+				// 		console.log(res);
+				// 	})
 			})
 			.catch(error => console.log({error}));
 	}
