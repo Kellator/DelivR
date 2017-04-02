@@ -6,6 +6,7 @@
   "dependencies": {
     "axios": "^0.15.3",
     "axios-debug": "0.0.4",
+    "cors": "^2.8.3",
     "express": "^4.15.2",
     "form-data": "^2.1.2",
     "history": "^4.6.0",
