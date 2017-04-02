@@ -59,6 +59,7 @@ export const asyncRequest = (cuisine, location) => {
 		return axios.post('http://localhost:3030/login')
 			.then(res => {
 				dispatch(fetchSuccess())
+				dispatch(saveAccess(res.data))
 				let accessToken = res.data.access_token;
 				let expiresIn = res.data.expires_in;
 				let tokenType = res.data.token_type;
@@ -73,7 +74,6 @@ export const asyncRequest = (cuisine, location) => {
 				let auth = tokenType + ' ' + accessToken;
 				console.log(auth);
 				dispatch(fetchRequest())
-				console.log(searchUrl); 
 				return axios.get('http://localhost:3030/login')
 					.then(res => {
 						dispatch(fetchSuccess())
@@ -81,22 +81,6 @@ export const asyncRequest = (cuisine, location) => {
 						console.log(res.data);
 						console.log(res);
 					})
-				// return axios.get(searchUrl, {
-				// 	params : {
-				// 		'location' : location,
-				// 		'categories' : cuisine
-				// 	},
-				// 	headers : {
-				// 		'Access-Control-Allow-Origin' : '*',
-				// 		'Authorization' : auth
-				// 	}
-				// })
-				// 	.then(res => {
-					// dispatch(fetchSuccess())
-				// 		console.log('second hello');
-				// 		console.log(res.data);
-				// 		console.log(res);
-				// 	})
 			})
 			.catch(error => console.log({error}));
 	}
