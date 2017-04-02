@@ -6,9 +6,6 @@ axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
 axios.defaults.headers.post['Access-Control-Allow-Methods'] = 'PUT, GET, POST, DELETE, OPTIONS';
 axios.defaults.headers.post['Access-Control-Allow-Headers'] = 'accept, content-type, x-parse-application-id, x-parse-rest-api-key, x-parse-session-token';
 
-axios.defaults.headers['Access-Control-Allow-Origin'] = '*';
-axios.defaults.headers['Access-Control-Allow-Methods'] = 'PUT, GET, POST, DELETE, OPTIONS';
-axios.defaults.headers['Access-Control-Allow-Headers'] = 'accept, content-type, x-parse-application-id, x-parse-rest-api-key, x-parse-session-token';
 import URLSearchParams from 'url-search-params';
 // const yelp = require('yelp-fusion');
 // action constants
@@ -52,40 +49,9 @@ export const fetchRequest = () => ({
 	type: FETCH_REQUEST,
 });
 
-let cuisine;
-let location;
+// let cuisine;
+// let location;
 
-const tokenUrl = "https://api.yelp.com/oauth2/token";
-let searchLocation = "location=" + location;
-let searchCuisine = "categories=" + cuisine;
-let searchUrl = "https://api.yelp.com/v3/transactions/delivery/search?" + 
-searchLocation + searchCuisine;
-
-const tokenHeaders = new Headers();
-tokenHeaders.append("grant_type", "client_credentials");
-tokenHeaders.append("client_id", "F1GjwxdHmDgOyEQnFkrOdg");
-tokenHeaders.append("client_secret", "6VupwbF7anbAd8yHZYbl9CDDQDFzzmORu2al1E3JkqaI1HSvGEqFSLT6M8VDpLZp");
-
-const tokenData = new FormData();
-tokenData.append("grant_type", "client_credentials");
-tokenData.append("client_id", "F1GjwxdHmDgOyEQnFkrOdg");
-tokenData.append("client_secret", "6VupwbF7anbAd8yHZYbl9CDDQDFzzmORu2al1E3JkqaI1HSvGEqFSLT6M8VDpLZp");
-
-
-// API Search
-// const apiHeaders = new Headers();
-// apiHeaders.append("authorization", "Bearer" + accessToken);
-// apiHeaders.append("terms", "delivery");
-
-// const apiData = new FormData();
-// apiData.append("authorization", "Bearer " + accessToken);
-// apiData.append("terms", "delivery");
-
-// const apiSearchParams = {
-// 	credentials: "include",
-// 	method: 'get',
-// 	Headers: apiHeaders
-// }
 // make fetch to 'localhost'  in production do to hosted site
 export const asyncRequest = (cuisine, location) => {
 	return dispatch => {
