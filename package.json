@@ -6,6 +6,7 @@
   "dependencies": {
     "axios": "^0.15.3",
     "axios-debug": "0.0.4",
+    "body-parser": "^1.17.1",
     "cors": "^2.8.3",
     "express": "^4.15.2",
     "form-data": "^2.1.2",
@@ -19,6 +20,7 @@
     "redux-form": "^6.5.0",
     "redux-logger": "^2.8.2",
     "redux-thunk": "^2.2.0",
+    "request-promise": "^4.2.0",
     "semantic-ui-react": "^0.67.1",
     "url-search-params": "^0.7.0"
   },

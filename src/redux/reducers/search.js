@@ -24,11 +24,11 @@ export function locationReducer(state = "", action) {
 	}
 }
 
-export function accessReducer(state = {}, action) {
+export function resultReducer(state = {}, action) {
 	switch(action.type) {
 		case 'SAVE_ACCESS':
 			return Object.assign({}, state, {
-				access : action.accessData
+				result : action.resultData
 			});
 		default: 
 			return state;

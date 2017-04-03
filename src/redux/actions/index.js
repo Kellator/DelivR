@@ -1,4 +1,3 @@
-// import fetch from 'isomorphic-fetch';
 import axios from 'axios';
 require('axios-debug')(axios);
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
@@ -6,9 +5,6 @@ axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
 axios.defaults.headers.post['Access-Control-Allow-Methods'] = 'PUT, GET, POST, DELETE, OPTIONS';
 axios.defaults.headers.post['Access-Control-Allow-Headers'] = 'accept, content-type, x-parse-application-id, x-parse-rest-api-key, x-parse-session-token';
 
-// axios.defaults.headers.get['Access-Control-Allow-Origin'] = '*';
-// axios.defaults.headers.get['Access-Control-Allow-Methods'] = 'PUT, GET, POST, DELETE, OPTIONS';
-// axios.defaults.headers.get['Access-Control-Allow-Headers'] = 'accept, content-type, x-parse-application-id, x-parse-rest-api-key, x-parse-session-token';
 import URLSearchParams from 'url-search-params';
 const searchUrl = 'https://api.yelp.com/v3/transactions/delivery/search';
 
@@ -23,7 +19,7 @@ export const FETCH_SUCCESS = 'FETCH_SUCCESS';
 export const FETCH_ERROR = 'FETCH_ERROR';
 export const FETCH_REQUEST = 'FETCH_REQUEST';
 
-export const SAVE_ACCESS = 'SAVE_ACCESS';
+export const SAVE_RESULT = 'SAVE_RESULT';
 //actions creators
 //choose type of cuisine for search
 export const chooseCuisine = cuisine => ({ 
@@ -36,9 +32,9 @@ export const chooseLocation = location => ({
 	location
 });
 //reset search
-export const saveAccess = (accessData) => ({
-	type: SAVE_ACCESS,
-	accessData
+export const saveResult = (resultData) => ({
+	type: SAVE_RESULT,
+	resultData
 })
 export const fetchSuccess = (bool) => ({
 	type: FETCH_SUCCESS,
@@ -56,31 +52,25 @@ export const fetchRequest = () => ({
 export const asyncRequest = (cuisine, location) => {
 	return dispatch => {
 		dispatch(fetchRequest()) 
-		return axios.post('http://localhost:3030/login')
+		return axios.get('http://localhost:3030/search', {
+			params:{
+				cuisine: cuisine,
+				location: location
+			}
+		})
 			.then(res => {
 				dispatch(fetchSuccess())
-				dispatch(saveAccess(res.data))
-				let accessToken = res.data.access_token;
-				let expiresIn = res.data.expires_in;
-				let tokenType = res.data.token_type;
+				dispatch(saveResult(res.data))
 				console.log("hello");
 				console.log(res.data);
-				console.log(res);
-				console.log(accessToken);
-				console.log(expiresIn);
-				console.log(tokenType);
-				console.log(cuisine);
-				console.log(location);
-				let auth = tokenType + ' ' + accessToken;
-				console.log(auth);
 				dispatch(fetchRequest())
-				return axios.get('http://localhost:3030/login')
-					.then(res => {
-						dispatch(fetchSuccess())
-						console.log('second hello');
-						console.log(res.data);
-						console.log(res);
-					})
+				// return axios.get('http://localhost:3030/search')
+				// 	.then(res => {
+				// 		dispatch(fetchSuccess())
+				// 		console.log('second hello');
+				// 		console.log(res.data);
+				// 		console.log(res);
+				// 	})
 			})
 			.catch(error => console.log({error}));
 	}
