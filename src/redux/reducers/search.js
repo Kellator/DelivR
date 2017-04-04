@@ -26,10 +26,8 @@ export function locationReducer(state = "", action) {
 
 export function resultReducer(state = {}, action) {
 	switch(action.type) {
-		case 'SAVE_ACCESS':
-			return Object.assign({}, state, {
-				result : action.resultData
-			});
+		case 'SAVE_RESULT':
+			return action.resultData;
 		default: 
 			return state;
 	}

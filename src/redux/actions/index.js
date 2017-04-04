@@ -32,7 +32,7 @@ export const chooseLocation = location => ({
 	location
 });
 //reset search
-export const saveResult = (resultData) => ({
+export const saveResult = resultData => ({
 	type: SAVE_RESULT,
 	resultData
 })
