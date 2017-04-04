@@ -32,7 +32,7 @@ export function resultReducer(state = {}, action) {
 			return state;
 	}
 }
-export function fetchRequestReducer(state = initialState, action) {
+export function fetchRequestReducer(state = "", action) {
 	switch(action.type) {
 		case 'FETCH_REQUEST':
 			return true;

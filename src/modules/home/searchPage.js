@@ -26,4 +26,4 @@ const mapStateToProps = (state, props) => ({
     location: state.locationSearch
 })
 
-export default connect(mapStateToProps, { chooseCuisine: actions.chooseCuisine, chooseLocation: actions.chooseCuisine, asyncRequest: actions.asyncRequest })(SearchPage);
+export default connect(mapStateToProps, { chooseCuisine: actions.chooseCuisine, chooseLocation: actions.chooseLocation, asyncRequest: actions.asyncRequest })(SearchPage);
