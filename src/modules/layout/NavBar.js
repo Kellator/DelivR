@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const NavBar = ({ path }) => (
 	<Menu>
 		<Menu.Menu>
-			<Menu.Item as={Link} to='/'>
+			<Menu.Item as={Link} to='/home'>
 				DelivR
 			</Menu.Item>
 		</Menu.Menu>

@@ -1,4 +1,6 @@
 import axios from 'axios';
+import { history } from '../../redux/store';
+import { push, replace } from 'react-router-redux';
 require('axios-debug')(axios);
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
@@ -18,6 +20,7 @@ export const RESET_SELECTIONS = 'RESET_SELECTIONS';
 export const FETCH_SUCCESS = 'FETCH_SUCCESS';
 export const FETCH_ERROR = 'FETCH_ERROR';
 export const FETCH_REQUEST = 'FETCH_REQUEST';
+export const DISPLAY_RESULTS = 'DISPLAY_RESULTS';
 
 export const SAVE_RESULT = 'SAVE_RESULT';
 //actions creators
@@ -47,7 +50,9 @@ export const fetchError = (bool) => ({
 export const fetchRequest = () => ({
 	type: FETCH_REQUEST,
 });
-
+export const displayResults = () => {
+    type: DISPLAY_RESULTS;
+}
 // make fetch to 'localhost'  in production do to hosted site
 export const asyncRequest = (cuisine, location) => {
 	return dispatch => {
@@ -61,16 +66,9 @@ export const asyncRequest = (cuisine, location) => {
 			.then(res => {
 				dispatch(fetchSuccess())
 				dispatch(saveResult(res.data))
+				history.replace('/results');
 				console.log("hello");
 				console.log(res.data);
-				dispatch(fetchRequest())
-				// return axios.get('http://localhost:3030/search')
-				// 	.then(res => {
-				// 		dispatch(fetchSuccess())
-				// 		console.log('second hello');
-				// 		console.log(res.data);
-				// 		console.log(res);
-				// 	})
 			})
 			.catch(error => console.log({error}));
 	}

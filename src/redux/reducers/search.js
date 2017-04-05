@@ -1,9 +1,12 @@
+import { history } from '../../redux/store';
+
 const initialState = {
     cuisine: "",
     location: "",
     fetching: false,
 };
 console.log(initialState);
+
 
 // saves type of cuisine to state - dispatched on submit
 export function cuisineReducer(state = "", action) {
@@ -44,3 +47,4 @@ export function fetchRequestReducer(state = "", action) {
 			return state;
 	}
 }
+// return Object.assign({}, state, {result:action.resultData, ;

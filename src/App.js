@@ -1,15 +1,31 @@
 import React, { PropTypes } from 'react';
 import { NavBar } from './modules';
+import { BrowserRouter as Router, Route} from 'react-router-dom';
+import { HomeView, About, More, Page404, ReturnedResultList } from './modules';
 
-const App = ( {children, location} ) => (
-    <div> 
-    	<NavBar path={location.pathname} />
-    </div>
-);
+class App extends React.Component {
 
-App.PropTypes = {
-	children: PropTypes.element.isRequired,
-	location: PropTypes.object.isRequired
+	render () {
+		console.log(this.props);
+		return (
+			<div>
+				<div> 
+					<NavBar path={this.props.location.pathname} />
+				</div>
+				<div>
+					<Route path="/home" component={HomeView} />
+					<Route path="/about" component={About} />
+					<Route path="/more" component={More} />
+					<Route path="/results" component={ReturnedResultList} />
+				</div>
+			</div>
+		)
+	}
 }
+
+// App.PropTypes = {
+// 	children: PropTypes.element.isRequired,
+// 	location: PropTypes.object.isRequired
+// }
 
 export default App;
