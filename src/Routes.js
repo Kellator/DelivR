@@ -7,7 +7,7 @@ import { HomeView, About, More, Page404, ReturnedResultList } from './modules';
 export default () => (
 	<Router history={history}>
 		<div>
-			<Route component={App} >
+			<Route path="/" component={App} >
 			</Route>
 		</div>
 	</Router>
