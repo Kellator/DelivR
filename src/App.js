@@ -8,17 +8,19 @@ class App extends React.Component {
 	render () {
 		console.log(this.props);
 		return (
+			<Router>
 			<div>
 				<div> 
 					<NavBar path={this.props.location.pathname} />
 				</div>
 				<div>
-					<Route path="/home" component={HomeView} />
+					<Route exact path="/" component={HomeView} />
 					<Route path="/about" component={About} />
 					<Route path="/more" component={More} />
 					<Route path="/results" component={ReturnedResultList} />
 				</div>
 			</div>
+			</Router>
 		)
 	}
 }
