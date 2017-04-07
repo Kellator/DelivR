@@ -1,5 +1,5 @@
 import { compose, createStore, applyMiddleware } from 'redux';
-import createBrowserHistory from 'history/createBrowserHistory';
+import createHashHistory from 'history/createHashHistory';
 import { syncHistoryWithStore, routerMiddleware } from 'react-router-redux';
 import logger from 'redux-logger';
 import rootReducer from './reducers';
@@ -30,6 +30,6 @@ let store = createStore(
     enhancers
 );
 
-export const history = syncHistoryWithStore(createBrowserHistory(), store);
+export const history = syncHistoryWithStore(createHashHistory(), store);
 
 export { store };

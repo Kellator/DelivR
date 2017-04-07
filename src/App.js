@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import { NavBar } from './modules';
-import { BrowserRouter as Router, Route} from 'react-router-dom';
+import { HashRouter as Router, Route} from 'react-router-dom';
 import { HomeView, About, More, Page404, ReturnedResultList } from './modules';
 
 class App extends React.Component {
