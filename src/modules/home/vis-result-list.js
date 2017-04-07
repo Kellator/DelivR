@@ -6,7 +6,7 @@ import * as actions from '../../redux/actions';
 class ReturnedResultList extends React.Component {
   render() {
     return (
-      <ResultList results={this.results}/>
+      <ResultList results={this.props.result}/>
     );
   }
 }
