@@ -1,9 +1,12 @@
+import { history } from '../../redux/store';
+
 const initialState = {
     cuisine: "",
     location: "",
     fetching: false,
 };
 console.log(initialState);
+
 
 // saves type of cuisine to state - dispatched on submit
 export function cuisineReducer(state = "", action) {
@@ -24,7 +27,15 @@ export function locationReducer(state = "", action) {
 	}
 }
 
-export function fetchRequestReducer(state = initialState, action) {
+export function resultReducer(state = {}, action) {
+	switch(action.type) {
+		case 'SAVE_RESULT':
+			return action.resultData;
+		default: 
+			return state;
+	}
+}
+export function fetchRequestReducer(state = "", action) {
 	switch(action.type) {
 		case 'FETCH_REQUEST':
 			return true;
@@ -36,3 +47,4 @@ export function fetchRequestReducer(state = initialState, action) {
 			return state;
 	}
 }
+// return Object.assign({}, state, {result:action.resultData, ;

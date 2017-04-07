@@ -3,6 +3,7 @@ import Search from './search';
 import {connect} from 'react-redux';
 import * as actions from '../../redux/actions';
 import { reset } from 'redux-form';
+import { history } from '../../redux/store';
 
 // container component to connect to redux, dispatch actions, and define handleSubmit 
 
@@ -26,4 +27,4 @@ const mapStateToProps = (state, props) => ({
     location: state.locationSearch
 })
 
-export default connect(mapStateToProps, { chooseCuisine: actions.chooseCuisine, chooseLocation: actions.chooseCuisine, asyncRequest: actions.asyncRequest })(SearchPage);
+export default connect(mapStateToProps, { chooseCuisine: actions.chooseCuisine, chooseLocation: actions.chooseLocation, asyncRequest: actions.asyncRequest })(SearchPage);
