@@ -1,19 +1,15 @@
 import React from 'react';
 
-class Result extends React.Component {
-    render() {
-        console.log(this.props);
+const Result = (props) => {
+        console.log(props);
         return (
-            <li>
-                <div>
-                        <img />
-                        <h3>Name: </h3>
-                        <h4>Phone: </h4>
-                        <h4>Rating: </h4>
-                </div>
-            </li>
-        )
-    }
-
+            <div className="result-item">
+                <li>
+                    <p>Name: {props.result.name}</p>
+                    <p>Phone: {props.result.display_phone}</p>
+                    <p>hello can you see me?</p>
+                </li>
+            </div>
+        );
 }
 export default Result;
