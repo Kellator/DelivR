@@ -5,14 +5,13 @@ import * as actions from '../../redux/actions';
 
 class ReturnedResultList extends React.Component {
   render() {
-      console.log(this.props.result);
     return (
       <ResultList results={this.props.result}/>
     );
   }
 }
 const mapStateToProps = (state, props) => ({
-    result: state.result.businesses
+    result: state.result
 })
 
 export default connect(mapStateToProps)(ReturnedResultList);
