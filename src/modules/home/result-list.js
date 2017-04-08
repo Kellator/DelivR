@@ -4,12 +4,13 @@ import Result from './result';
 class ResultList extends React.Component {
 
     render() {
-            console.log(this.props)
+        console.log(this.props.results)
+        const results = this.props.results;
         return(
-            <ul>
-                <Result /> 
-            </ul>
-        )
+            <div className="results-list">
+                <Result result={results} />
+            </div>
+        );
     }
 }
-export default ResultList;
+export default ResultList; 
