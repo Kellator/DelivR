@@ -1,9 +1,15 @@
 import React, { PropTypes } from 'react';
 import Result from './result';
 
-const ResultList = (props) => (
-    <ul>
-        <Result /> 
-    </ul>
-)
+class ResultList extends React.Component {
+
+    render() {
+            console.log(this.props)
+        return(
+            <ul>
+                <Result /> 
+            </ul>
+        )
+    }
+}
 export default ResultList;
