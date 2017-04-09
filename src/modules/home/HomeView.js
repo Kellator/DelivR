@@ -3,7 +3,7 @@ import SearchPage from './searchPage';
 import '../../index.css';
 
 const HomeView = () => ( 
-    <div className="flex-item">
+    <div className="container">
         <div className="container spacer">
             <h1 className="flex-item "> DelivR < /h1>   
             <p className="flex-item "> Hungry?  Nothing in the kitchen?  Don't want to go out? < /p>

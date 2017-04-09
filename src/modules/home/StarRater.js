@@ -18,7 +18,7 @@ function StarRater(props) {
     }
 
     return (
-        <span className="star-rater">
+        <span className="star-rater flex-item">
             {stars}
         </span>
     );

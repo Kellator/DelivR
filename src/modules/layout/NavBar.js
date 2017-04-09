@@ -4,7 +4,7 @@ import { browserHistory } from 'react-router';
 import { Link } from 'react-router-dom';
 
 const NavBar = ({ path }) => (
-	<Menu>
+	<Menu >
 		<Menu.Menu>
 			<Menu.Item as={Link} to='/'>
 				Home

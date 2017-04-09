@@ -4,6 +4,9 @@ body {
   list-style: none;
   box-sizing: border-box;
 }
+/*.nav-color {
+   background-color: #cc0000;
+}*/
 .container {
   display: flex;
   flex-flow: column;
@@ -32,6 +35,15 @@ body {
 .button {
   min-width: 174px;
   margin-top: 4px;
+}
+.result-image {
+  width: 132px;
+  height: 132px;
+}
+.result-item {
+  height: 300px;
+  width: 300px;
+
 }
 @media all and (min-width: 720px) {
   max-width: 100%;
