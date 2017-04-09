@@ -1,32 +1,34 @@
 import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
-import { Grid, Form } from 'semantic-ui-react';
+import '../../index.css';
+
+const styles = {
+	head: {
+		display: 'flex',
+		justifyContent: 'center',
+		alignItems: 'center',
+		flexDirection: 'column',
+		padding: 50
+	}
+}
 
 const Search = (props) => {
     const { handleSubmit, pristine, reset, submitting } = props
     return (
-        <Grid centered >
-            <Grid.Column width={6}>
-                <Form>
-                <form onSubmit={handleSubmit(props.onSubmit)} className="search-form">
-                    <Form.Field>
-                        <div >
-                            <label>I'm Hungry For...</label>
-                            <Field name="cuisine" component="input" type="text" placeholder="Chinese" />
-                        </div>
-                    </Form.Field>
-                    <Form.Field>
-                        <div>
-                            <label>Location</label>
-                            <Field name="location" required component="input" type="text" placeholder="City, State or Zipcode" />
-                        </div>
-                    </Form.Field>
-                    <button type="submit" disabled={pristine || submitting}>Feed Me!</button>
-                    <button type="button" disabled={pristine || submitting} onClick={reset}>Changed my mind...</button>
-                </form>
-                </Form>
-            </Grid.Column>
-        </Grid>
+        <div className="">
+            <form onSubmit={handleSubmit(props.onSubmit)} className="spacer container" >
+                    <div className="flex-item">
+                        <label>I'm Hungry For...</label>
+                        <Field className="block rounded" name="cuisine" component="input" type="text" placeholder="Chinese" />
+                    </div>
+                    <div className="flex-item">
+                        <label>Location</label>
+                        <Field className="block rounded" name="location" required component="input" type="text" placeholder="City, State or Zipcode" />
+                    </div>
+                <button className="block rounded button flex-item" type="submit" disabled={pristine || submitting}>Feed Me!</button>
+                <button className="block rounded button flex-item" type="button" disabled={pristine || submitting} onClick={reset}>Changed my mind...</button>
+            </form>
+        </div>
     )
 }
 Search = reduxForm({

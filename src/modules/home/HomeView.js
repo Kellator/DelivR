@@ -1,21 +1,13 @@
 import React from 'react';
 import SearchPage from './searchPage';
+import '../../index.css';
 
-const styles = {
-	head: {
-		display: 'flex',
-		justifyContent: 'center',
-		alignItems: 'center',
-		flexDirection: 'column',
-		padding: 50
-	}
-}
 const HomeView = () => ( 
-    <div>
-        <div style={styles.head}>
-            <h1> DelivR < /h1>   
-            <p> Hungry?  Nothing in the kitchen?  Don't want to go out? < /p>
-            <p>Let DelivR find you dinner that delivers!</p> 
+    <div className="flex-item">
+        <div className="container spacer">
+            <h1 className="flex-item "> DelivR < /h1>   
+            <p className="flex-item "> Hungry?  Nothing in the kitchen?  Don't want to go out? < /p>
+            <p className="flex-item ">Let DelivR find you dinner that delivers!</p> 
         </div>
         <SearchPage />
     </div>

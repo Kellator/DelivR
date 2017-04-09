@@ -7,7 +7,7 @@ const NavBar = ({ path }) => (
 	<Menu>
 		<Menu.Menu>
 			<Menu.Item as={Link} to='/'>
-				DelivR
+				Home
 			</Menu.Item>
 		</Menu.Menu>
 		<Menu.Menu position="right">
