@@ -4,17 +4,17 @@ import { browserHistory } from 'react-router';
 import { Link } from 'react-router-dom';
 
 const NavBar = ({ path }) => (
-	<Menu >
-		<Menu.Menu>
-			<Menu.Item as={Link} to='/'>
+	<Menu className="menu-color">
+		<Menu.Menu className="menu-color">
+			<Menu.Item className="menu-color" as={Link} to='/'>
 				Home
 			</Menu.Item>
 		</Menu.Menu>
-		<Menu.Menu position="right">
+		<Menu.Menu className="menu-color" position="right">
 			<Menu.Item active={path === '/about'} as={Link} to='/about'>
 				About
 			</Menu.Item>
-			<Menu.Item active={path === '/more'} as={Link} to='/more'>
+			<Menu.Item className="menu-color" active={path === '/more'} as={Link} to='/more'>
 				More
 			</Menu.Item>
 		</Menu.Menu>

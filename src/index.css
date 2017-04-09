@@ -3,10 +3,8 @@ body {
   font-family: sans-serif;
   list-style: none;
   box-sizing: border-box;
+  background-color: #c01414;
 }
-/*.nav-color {
-   background-color: #cc0000;
-}*/
 .container {
   display: flex;
   flex-flow: column;
@@ -23,18 +21,22 @@ body {
 .spacer {
   margin-top: 2.85714286em;
 }
+.space-small {
+  margin-top: 1.6em;
+}
 .block {
   display: block;
 }
 .rounded {
-  border: 1px solid #22426;
+  border: 1px solid #3e3e3e;
   border-radius: .28571429rem;
   min-height: 2.85714286em;
-  box-shadow: 0 1px 2px 0 #22426;
+  box-shadow: 0 1px 2px 0 #3e3e3e;
 }
 .button {
   min-width: 174px;
   margin-top: 4px;
+  min-height:2em;
 }
 .result-image {
   width: 132px;
@@ -43,6 +45,30 @@ body {
 .result-item {
   height: 300px;
   width: 300px;
+  background-color: white;
+}
+.link-color {
+  color: #c01414;
+}
+.link-color:hover {
+  color: #510000;
+  text-decoration: underline;
+}
+input {
+  padding: 4px;
+}
+.title {
+  font-size: 3em;
+  font-weight: bold;
+  text-shadow: #3e3e3e;
+  color: white;
+}
+.menu-item {
+  background-color: rgb(221, 221, 221);
+}
+.white-text {
+  color: white;
+  font-size: 1.2em;
 
 }
 @media all and (min-width: 720px) {

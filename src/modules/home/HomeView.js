@@ -4,10 +4,10 @@ import '../../index.css';
 
 const HomeView = () => ( 
     <div className="container">
-        <div className="container spacer">
-            <h1 className="flex-item "> DelivR < /h1>   
-            <p className="flex-item "> Hungry?  Nothing in the kitchen?  Don't want to go out? < /p>
-            <p className="flex-item ">Let DelivR find you dinner that delivers!</p> 
+        <div className="container">
+            <h1 className="flex-item title"> DelivR < /h1>   
+            <p className="center white-text"> Hungry?  Nothing in the kitchen?  Don't want to go out? < /p>
+            <p className="center white-text">Let DelivR find you dinner that delivers!</p> 
         </div>
         <SearchPage />
     </div>
