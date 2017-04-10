@@ -3,8 +3,16 @@ import { Menu } from 'semantic-ui-react';
 import { browserHistory } from 'react-router';
 import { Link } from 'react-router-dom';
 
+const styles = {
+	head: {
+		border: '1px solid #3e3e3e',
+  		borderRadius: '0',
+		borderTopLeftRadius: '0',
+		borderTopRightRadius: '0',
+  		minHeight: '2.85714286em',
+}}
 const NavBar = ({ path }) => (
-	<Menu className="menu-color">
+	<Menu className="menu-color" style={styles.head}>
 		<Menu.Menu className="menu-color">
 			<Menu.Item className="menu-color" as={Link} to='/'>
 				Home
