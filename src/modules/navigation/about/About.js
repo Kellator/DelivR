@@ -1,9 +1,14 @@
 import React from 'react';
-
+const styles = {
+	links : {
+		color: 'white',
+		textDecoration: 'underline'
+	}
+}
 const About = () => (
-	<div>
-		<h1>About DelivR</h1>
-		<p>DelivR was developed as the capstone project for <a href="https://www.thinkful.com/">Thinkful's Flexible Web Development</a> React/Redux unit.</p>
+	<div className="flex-item space-small">
+		<h1 className="flex-item">About DelivR</h1>
+		<p className="flex-item">DelivR was developed as the capstone project for <a style={styles.links} href="https://www.thinkful.com/">Thinkful's Flexible Web Development</a> React/Redux unit.</p>
 		<p>DelivR uses the Yelp Fusion Transaction Search API.  At this time, the API does not return businesses without any reviews.</p>
 		<p>The transaction type is set for delivery and currently only supports delivery within the U.S.</p>
 		<h3>Project Requirements</h3>
@@ -20,8 +25,8 @@ const About = () => (
 		<h3>Why did I choose to make this app?</h3>
 		<p>I've moved around a lot in my life.  When you move somewhere new, start a new job, or even visit someone in a place you're not familiar with, you probably get hungry and may not want to cook something.  How do you know who delivers to where you are?  I wanted to make it easier to figure that out so, I developed DelivR.</p>
 		<h3>Technology Used</h3>
-		<p>This project was bootstrapped with <a href="https://github.com/facebookincubator/create-react-app">Create React App</a>.</p>
-		<p>DelivR uses the <a href="https://www.yelp.com/developers/documentation/v3">Yelp Fusion API</a>.</p>
+		<p>This project was bootstrapped with <a style={styles.links} href="https://github.com/facebookincubator/create-react-app">Create React App</a>.</p>
+		<p>DelivR uses the <a style={styles.links} href="https://www.yelp.com/developers/documentation/v3">Yelp Fusion API</a>.</p>
 		<ul> 
 			<li>React v.15.4.2</li>
 			<li>React-Redux v.5.0.3</li>

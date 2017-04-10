@@ -14,6 +14,7 @@ body {
 .flex-item {
   align-self: center;
   flex: 0 1 auto;
+  overflow: auto;
 }
 .center {
   text-align: center;
@@ -49,10 +50,10 @@ body {
 }
 .link-color {
   color: #c01414;
+  text-decoration: underline;
 }
 .link-color:hover {
   color: #510000;
-  text-decoration: underline;
 }
 input {
   padding: 4px;
