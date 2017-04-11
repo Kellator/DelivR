@@ -2,7 +2,6 @@ import React from 'react';
 import { HashRouter as Router, Route} from 'react-router-dom';
 import { history } from './redux/store';
 import App from './App';
-import { HomeView, About, More, Page404, ReturnedResultList } from './modules';
 
 export default () => (
 	<Router history={history}>

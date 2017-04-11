@@ -12,10 +12,10 @@ const HomeView = () => (
         <SearchPage />
     </div>
 );
-const mapStateToProps = (state, props) => ({
+{/*const mapStateToProps = (state, props) => ({
 	search: {
 		cuisineSearch: props.cuisineSearch,
 		locationSearch: props.locationSearch
 	}
-});
+});*/}
 export default HomeView;

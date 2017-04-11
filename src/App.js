@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import { NavBar } from './modules';
 import { HashRouter as Router, Route} from 'react-router-dom';
 import { HomeView, About, More, Page404, ReturnedResultList } from './modules';
@@ -25,10 +25,5 @@ class App extends React.Component {
 		)
 	}
 }
-
-// App.PropTypes = {
-// 	children: PropTypes.element.isRequired,
-// 	location: PropTypes.object.isRequired
-// }
 
 export default App;

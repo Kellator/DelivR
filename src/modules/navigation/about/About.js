@@ -6,15 +6,15 @@ const styles = {
 	}
 }
 const About = () => (
-	<div className="flex-item space-small">
-		<h1 className="flex-item">About DelivR</h1>
-		<p className="flex-item">DelivR was developed as the capstone project for <a style={styles.links} href="https://www.thinkful.com/">Thinkful's Flexible Web Development</a> React/Redux unit.</p>
-		<p>DelivR uses the Yelp Fusion Transaction Search API.  At this time, the API does not return businesses without any reviews.</p>
-		<p>The transaction type is set for delivery and currently only supports delivery within the U.S.</p>
-		<h3>Project Requirements</h3>
-		<p>Make use of one or more third party APIs and come up with an app that does something interesting.</p>
-		<h3>High-Level Requirements</h3>
-		<ul>
+	<div className="flex-item ">
+		<h1 className="about-flex">About DelivR</h1>
+		<p className="about-flex">DelivR was developed as the capstone project for <a style={styles.links} href="https://www.thinkful.com/">Thinkful's Flexible Web Development</a> React/Redux unit.</p>
+		<p className="about-flex">DelivR uses the Yelp Fusion Transaction Search API.  At this time, the API does not return businesses without any reviews.</p>
+		<p className="about-flex">The transaction type is set for delivery and currently only supports delivery within the U.S.</p>
+		<h3 className="about-flex">Project Requirements</h3>
+		<p className="about-flex">Make use of one or more third party APIs and come up with an app that does something interesting.</p>
+		<h3 className="about-flex">High-Level Requirements</h3>
+		<ul className="about-flex">
 			<li>Create a single page: The overarching user-experience should pull data from one or more third-party APIs and display the data to the user.</li>
 			<li>Make an app that does something interesting.</li>
 			<li>Use React, React Router, and Redux - the main technologies taught in the unit.</li>

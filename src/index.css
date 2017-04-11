@@ -14,7 +14,8 @@ body {
 .flex-item {
   align-self: center;
   flex: 0 1 auto;
-  overflow: auto;
+  /*overflow: auto;*/
+  /*padding: 10px;*/
 }
 .center {
   text-align: center;
@@ -38,6 +39,7 @@ body {
   min-width: 174px;
   margin-top: 4px;
   min-height:2em;
+  font-weight: bolder;
 }
 .result-image {
   width: 132px;
@@ -70,7 +72,10 @@ input {
 .white-text {
   color: white;
   font-size: 1.2em;
-
+}
+.about-flex {
+  padding: 5px;
+  align-self: center;
 }
 @media all and (min-width: 720px) {
   max-width: 100%;

@@ -1,6 +1,6 @@
 import { compose, createStore, applyMiddleware } from 'redux';
 import createHashHistory from 'history/createHashHistory';
-import { syncHistoryWithStore, routerMiddleware } from 'react-router-redux';
+import { syncHistoryWithStore } from 'react-router-redux';
 import logger from 'redux-logger';
 import rootReducer from './reducers';
 import thunk from 'redux-thunk';
