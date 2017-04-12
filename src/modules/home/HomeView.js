@@ -1,17 +1,19 @@
 import React from 'react';
 import SearchPage from './searchPage';
+import '../../grid.css';
 import '../../index.css';
 
+
 const HomeView = () => ( 
-    <div className="container">
-        <div className="panel center">
-            <div className="container space-small">
-                <h1 className="flex-item title"> DelivR </h1>   
-                <p className="center white-text"> Hungry?  Nothing in the kitchen?  Don't want to go out? </p>
-                <p className="center white-text">Let DelivR find you dinner that delivers!</p> 
+    <div className="Grid Grid-column ">
+        {/*<div id="HomeView-container" className="Grid-cell">*/}
+            <div className="Grid Grid-column ">
+                <h1 className="title Grid-cell Grid-cell--center"> DelivR </h1>   
+                <p className=" white-text Grid-cell Grid-cell--center"> Hungry?  Nothing in the kitchen?  Don't want to go out? </p>
+                <p className="white-text Grid-cell Grid-cell--center ">Let DelivR find you dinner that delivers!</p> 
             </div>
-        </div>
-        <SearchPage />
+            <SearchPage />
+        {/*</div>*/}
     </div>
 );
 {/*const mapStateToProps = (state, props) => ({

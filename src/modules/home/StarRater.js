@@ -18,7 +18,7 @@ function StarRater(props) {
     }
 
     return (
-        <span className="star-rater flex-item">
+        <span className="star-rater Grid-cell Grid-cell--center">
             {stars}
         </span>
     );

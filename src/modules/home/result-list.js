@@ -10,7 +10,7 @@ class ResultList extends React.Component {
             return <Result key={index} result={result} />
         });
         return(
-            <div className="results-list container">
+            <div className="results-list Grid Grid--gutters">
                 {results}
             </div>
         );
