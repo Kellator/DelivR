@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import * as actions from '../../redux/actions';
 import { reset } from 'redux-form';
 import { history } from '../../redux/store';
+import '../../index.css';
 
 // container component to connect to redux, dispatch actions, and define handleSubmit 
 

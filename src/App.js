@@ -1,7 +1,8 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import { NavBar } from './modules';
 import { HashRouter as Router, Route} from 'react-router-dom';
 import { HomeView, About, More, Page404, ReturnedResultList } from './modules';
+import './index.css';
 
 class App extends React.Component {
 
@@ -9,11 +10,11 @@ class App extends React.Component {
 		console.log(this.props);
 		return (
 			<Router>
-			<div>
+			<div >
 				<div> 
 					<NavBar path={this.props.location.pathname} />
 				</div>
-				<div>
+				<div className="container">
 					<Route exact path="/" component={HomeView} />
 					<Route path="/about" component={About} />
 					<Route path="/more" component={More} />
@@ -24,10 +25,5 @@ class App extends React.Component {
 		)
 	}
 }
-
-// App.PropTypes = {
-// 	children: PropTypes.element.isRequired,
-// 	location: PropTypes.object.isRequired
-// }
 
 export default App;

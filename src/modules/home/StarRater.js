@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../index.css';
 
 function StarRater(props) {
     const stars = [];
@@ -17,7 +18,7 @@ function StarRater(props) {
     }
 
     return (
-        <span className="star-rater">
+        <span className="star-rater Grid-cell Grid-cell--center">
             {stars}
         </span>
     );

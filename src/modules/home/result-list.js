@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import Result from './result';
+import '../../index.css';
 
 class ResultList extends React.Component {
     render() {
@@ -9,7 +10,7 @@ class ResultList extends React.Component {
             return <Result key={index} result={result} />
         });
         return(
-            <div className="results-list">
+            <div className="results-list Grid Grid--gutters">
                 {results}
             </div>
         );

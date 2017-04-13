@@ -57,7 +57,7 @@ export const displayResults = () => {
 export const asyncRequest = (cuisine, location) => {
 	return dispatch => {
 		dispatch(fetchRequest()) 
-		return axios.get('http://localhost:3030/search', {
+		return axios.get('https://mysterious-inlet-23273.herokuapp.com/search', {
 			params:{
 				cuisine: cuisine,
 				location: location
