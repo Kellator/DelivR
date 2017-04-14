@@ -14,7 +14,7 @@ class App extends React.Component {
 				<div> 
 					<NavBar path={this.props.location.pathname} />
 				</div>
-				<div className="container">
+				<div className="Grid-cell Grid-cell--center">
 					<Route exact path="/" component={HomeView} />
 					<Route path="/about" component={About} />
 					<Route path="/more" component={More} />
