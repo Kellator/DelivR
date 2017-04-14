@@ -3,16 +3,6 @@ import { Field, reduxForm } from 'redux-form';
 import '../../grid.css';
 import '../../index.css';
 
-// const styles = {
-// 	head: {
-// 		display: 'flex',
-// 		justifyContent: 'center',
-// 		alignItems: 'center',
-// 		flexDirection: 'column',
-// 		padding: 50
-// 	}
-// }
-
 const Search = (props) => {
     const { handleSubmit, pristine, reset, submitting } = props
     return (
