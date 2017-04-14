@@ -27,7 +27,7 @@ const Search = (props) => {
                         <Field className="block rounded " name="location" required component="input" type="text" placeholder="City, State or Zipcode" />
                     </div>
                     <div className="space-small" />
-                <button className="block rounded button " type="submit" disabled={pristine || submitting}>Feed Me!</button>
+                <button className="Grid-cell Grid-cell--center rounded button " type="submit" disabled={pristine || submitting}>Feed Me!</button>
                 {/*<button className="block rounded button flex-item" type="button" disabled={pristine || submitting} onClick={reset}>Changed my mind...</button>*/}
             </form>
         </div>
