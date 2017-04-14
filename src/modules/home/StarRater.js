@@ -20,7 +20,7 @@ function StarRater(props) {
 
     return (
         <div className="result-star result-text">
-            <span className="star-rater result-text">
+            <span className="star-rater result-text gray">
                 {stars}
             </span>
         </div>

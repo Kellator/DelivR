@@ -5,6 +5,12 @@ body {
   box-sizing: border-box;
   background-color: #c01414;
 }
+.body {
+  max-width: 1000px;
+  padding-left: 1.04166666%;
+  padding-right: 1.04166666%;
+	margin: 0 auto;
+}
 .bottom-space { 
   margin-bottom: 10px;
 }
@@ -30,20 +36,25 @@ body {
   margin: 10px auto;
 }
 .result-image {
-  width: 132px;
-  height: 132px;
+  max-width: 132px;
+  max-height: 132px;
   margin-left: auto;
   margin-right: auto;
   display: block;
 }
 .result-text {
   text-align: center;
+  max-width: 95%;
+}
+.result-container {
+  width: 300px;
+  height: 300px;
 }
 .result-item {
   height: 300px;
   width: 300px;
   background-color: white;
-  margin: 20px;
+  margin: 20px 0 0 20px;
   padding: 18px;
 }
 .result-star {
@@ -57,6 +68,12 @@ body {
 .link-color {
   color: #c01414;
   text-decoration: underline;
+}
+.phone-link {
+  color: #3e3e3e;
+}
+.gray {
+  color:  #3e3e3e;
 }
 .link-color:hover {
   color: #510000;
@@ -90,14 +107,12 @@ input {
 .menu-item {
   background-color: rgb(221, 221, 221);
 }
-/*.white-text {
-  color: white;
-  font-size: 1.2em;
-}*/
-/*.about-flex {
-  padding: 5px;
-  align-self: center;
-}*/
+h3 {
+    -webkit-margin-before: .5em;
+    -webkit-margin-after: .5em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
 @media (min-width: 720px) {
   .panel {
     background-color: #c01414;
