@@ -26,8 +26,9 @@ const Search = (props) => {
                         <label className="home-text Grid-cell label-flex">Location</label>
                         <Field className="block rounded " name="location" required component="input" type="text" placeholder="City, State or Zipcode" />
                     </div>
-                    <div className="space-small" />
-                <button className="Grid-cell Grid-cell--center rounded button " type="submit" disabled={pristine || submitting}>Feed Me!</button>
+                <div className="Grid-cell Grid-cell--center space-small">
+                    <button className="Grid-cell Grid-cell--center rounded button " type="submit" disabled={pristine || submitting}>Feed Me!</button>
+                </div>
                 {/*<button className="block rounded button flex-item" type="button" disabled={pristine || submitting} onClick={reset}>Changed my mind...</button>*/}
             </form>
         </div>
