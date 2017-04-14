@@ -14,7 +14,7 @@
     align-self: center;
 }
 .Grid-cell {
-  -webkit-appearance:none;
+  -webkit-appearance: none;
   flex: 1 auto;
 }
 /* With gutters */
