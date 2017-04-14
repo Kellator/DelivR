@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../grid.css';
 import '../../index.css';
 
 function StarRater(props) {
@@ -18,9 +19,11 @@ function StarRater(props) {
     }
 
     return (
-        <span className="star-rater Grid-cell Grid-cell--center">
-            {stars}
-        </span>
+        <div className="result-star result-text">
+            <span className="star-rater result-text gray">
+                {stars}
+            </span>
+        </div>
     );
 }
 StarRater.defaultProps = {
