@@ -28,12 +28,14 @@ body {
   box-shadow: 0 1px 2px 0 #3e3e3e;
 }
 .button {
+  -webkit-appearance: none;
   min-width: 174px;
   margin-top: 4px;
   min-height:2em;
   font-weight: bolder;
   min-width: 180px;
   margin: 10px auto;
+  background-color: #d3d3d3;
 }
 .result-image {
   max-width: 132px;
@@ -79,6 +81,7 @@ body {
   color: #510000;
 }
 input {
+  -webkit-appearance: none;
   padding: 4px;
 }
 .search-div {
