@@ -1,5 +1,6 @@
 /*  Flexbox grid system from https://philipwalton.github.io/solved-by-flexbox/demos/grids/*/
 .Grid {
+-webkit-appearance: none;
   display: flex;
   flex-wrap: wrap;
 }
@@ -13,6 +14,7 @@
     align-self: center;
 }
 .Grid-cell {
+  -webkit-appearance:none;
   flex: 1 auto;
 }
 /* With gutters */
