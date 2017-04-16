@@ -11,8 +11,7 @@ const Result = (props) => {
                     <h2 className="result-text Grid--1of4 "><a className="link-color" href={props.result.url}>{props.result.name}</a></h2>
                     <h3 className="result-text Grid--1of4 "><a className="phone-link" href="tel:{props.result.display_phone}">{props.result.display_phone}</a></h3>
                     <StarRater  rating={props.result.rating} />                    
-                </li>
-           
+                </li>           
         );
 }
 export default Result;
