@@ -3,34 +3,22 @@ import { Menu } from 'semantic-ui-react';
 import { browserHistory } from 'react-router';
 import { Link } from 'react-router-dom';
 
-const styles = {
-	head: {
-		border: '1px solid #3e3e3e',
-  		borderRadius: '0',
-		borderTopLeftRadius: '0',
-		borderTopRightRadius: '0',
-  		minHeight: '2.85714286em'
-	},
-	textWeight: {
-		fontWeight: 'bold'
-	}
-}
 const NavBar = ({ path }) => (
-	<Menu className="menu-color" style={styles.head}>
-		<Menu.Menu className="menu-color">
-			<Menu.Item className="menu-color" style={styles.textWeight} as={Link} to='/'>
-				Home
-			</Menu.Item>
-		</Menu.Menu>
-		<Menu.Menu className="menu-color" style={styles.textWeight} position="right">
-			<Menu.Item active={path === '/about'} as={Link} to='/about'>
-				About
-			</Menu.Item>
-			<Menu.Item className="menu-color" style={styles.textWeight} active={path === '/more'} as={Link} to='/more'>
-				More
-			</Menu.Item>
-		</Menu.Menu>
-	</Menu>
+	<div className="Grid-cell" >
+		<div className="Grid  menu">
+			<div className="Grid-cell Grid-cell--top ">
+				<ul>
+					<li><Link to='/'>Home</Link></li>
+				</ul>
+			</div>	
+			<div className="Grid-cell Grid-cell--bottom">
+				<ul>
+					<li><Link to='/about'>About</Link></li>
+					<li><Link to='/more'>More</Link></li>
+				</ul>
+			</div>
+		</div>
+	</div>
 );
 
 export default NavBar;

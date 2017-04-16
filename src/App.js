@@ -10,7 +10,7 @@ class App extends React.Component {
 		console.log(this.props);
 		return (
 			<Router>
-			<div >
+			<div className="Grid">
 				<div> 
 					<NavBar path={this.props.location.pathname} />
 				</div>
