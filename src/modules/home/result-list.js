@@ -12,7 +12,7 @@ class ResultList extends React.Component {
             return <Result key={index} result={result} />
         });
         return(
-            <div className="Grid">
+            <div className="Grid margin-10">
                 <div className="Grid-cell ">
                     {results}
                  </div>
