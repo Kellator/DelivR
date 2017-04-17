@@ -5,9 +5,9 @@ import '../../index.css';
 
 
 const HomeView = () => ( 
-    <div className="Grid Grid-column search-div">
+    <div className="Grid Grid--center Grid-column search-div">
         <div className="Grid-cell">
-            <div className="Grid Grid-column ">
+            <div className="Grid Grid--center Grid-column ">
                 <h1 className="Grid-cell Grid-cell--center title">DelivR</h1>   
                 <p className="home-text Grid-cell Grid-cell--center">Hungry?  Nothing in the kitchen?</p>
                 <p className="home-text Grid-cell Grid-cell--center">Don't want to go out?</p>
