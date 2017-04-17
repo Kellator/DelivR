@@ -19,7 +19,7 @@ function StarRater(props) {
     }
 
     return (
-        <div className="result-star result-text">
+        <div className="result-text Grid--1of4 result-star result-text">
             <span className="star-rater result-text gray">
                 {stars}
             </span>

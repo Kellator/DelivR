@@ -13,7 +13,7 @@
     align-self: center;
 }
 .Grid-cell {
-  flex: 1 auto;
+  flex: 1 25%;
 }
 /* With gutters */
 .Grid--gutters {
