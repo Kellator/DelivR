@@ -12,8 +12,8 @@ class ResultList extends React.Component {
             return <Result key={index} result={result} />
         });
         return(
-            <div className="Grid Grid--center margin-10">
-                <div className="Grid-cell">
+            <div className="">
+                <div className="">
                     {results}
                  </div>
             </div>

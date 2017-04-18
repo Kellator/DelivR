@@ -6,11 +6,11 @@ import '../../index.css';
 
 
 const NavBar = ({ path }) => (
-	<div className="Grid-cell menu  " >
-		<ul className="Grid navigation">
-			<li className="Grid-cell  nav-list float-left"><NavLink activeClassName="selected" to='/'>Home</NavLink></li>
-			<li className="Grid-cell  nav-list float-right"><NavLink  activeClassName="selected" to='/about'>About</NavLink></li>
-			<li className="Grid-cell  nav-list float-right"><NavLink  activeClassName="selected" to='/more'>More</NavLink></li>
+	<div className=" menu  " >
+		<ul className="navigation">
+			<li className="nav-list float-left"><NavLink activeClassName="selected" to='/'>Home</NavLink></li>
+			<li className="nav-list float-right"><NavLink  activeClassName="selected" to='/about'>About</NavLink></li>
+			<li className="nav-list float-right"><NavLink  activeClassName="selected" to='/more'>More</NavLink></li>
 		</ul>
 	</div>
 );

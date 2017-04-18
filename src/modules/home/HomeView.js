@@ -5,16 +5,16 @@ import '../../index.css';
 
 
 const HomeView = () => ( 
-    <div className="Grid Grid--center Grid-column search-div">
-        <div className="Grid-cell">
-            <div className="Grid Grid--center Grid-column ">
-                <h1 className="Grid-cell Grid-cell--center title">DelivR</h1>   
-                <p className="home-text Grid-cell Grid-cell--center">Hungry?  Nothing in the kitchen?</p>
-                <p className="home-text Grid-cell Grid-cell--center">Don't want to go out?</p>
-                <p className="home-text Grid-cell Grid-cell--center ">Let DelivR find you dinner that delivers!</p> 
+    <div className="search-div">
+        <div className="">
+            <div className="">
+                <h1 className="title">DelivR</h1>   
+                <p className="home-text ">Hungry?  Nothing in the kitchen?</p>
+                <p className="home-text ">Don't want to go out?</p>
+                <p className="home-text ">Let DelivR find you dinner that delivers!</p> 
             </div>
         </div>
-        <div className="Grid-cell">
+        <div className="">
             <SearchPage />
         </div>
     </div>

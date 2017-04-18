@@ -12,11 +12,11 @@ class App extends React.Component {
 		console.log(this.props);
 		return (
 			<Router>
-			<div className="Grid Grid--center">
+			<div className="">
 				<div> 
 					<NavBar path={this.props.location.pathname} />
 				</div>
-				<div className="Grid-cell Grid-cell--center body">
+				<div className=" body">
 					<Route exact path="/" component={HomeView} />
 					<Route path="/about" component={About} />
 					<Route path="/more" component={More} />
