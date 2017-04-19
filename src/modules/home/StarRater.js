@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../grid.css';
-import '../../index.css';
+// import '../../index.css';
 
 function StarRater(props) {
     const stars = [];

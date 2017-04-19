@@ -1,7 +1,7 @@
 import React from 'react';
 import StarRater from './StarRater';
 import '../../grid.css';
-import '../../index.css';
+// import '../../index.css';
 
 const Result = (props) => {
         console.log(props);
