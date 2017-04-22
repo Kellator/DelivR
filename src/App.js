@@ -9,7 +9,6 @@ import './index.css';
 class App extends React.Component {
 
 	render () {
-		console.log(this.props);
 		return (
 			<Router>
 			<div className="">
