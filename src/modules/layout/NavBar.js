@@ -1,36 +1,18 @@
 import React from 'react';
-import { Menu } from 'semantic-ui-react';
 import { browserHistory } from 'react-router';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import '../../grid.css';
+// import '../../index.css';
 
-const styles = {
-	head: {
-		border: '1px solid #3e3e3e',
-  		borderRadius: '0',
-		borderTopLeftRadius: '0',
-		borderTopRightRadius: '0',
-  		minHeight: '2.85714286em'
-	},
-	textWeight: {
-		fontWeight: 'bold'
-	}
-}
+
 const NavBar = ({ path }) => (
-	<Menu className="menu-color" style={styles.head}>
-		<Menu.Menu className="menu-color">
-			<Menu.Item className="menu-color" style={styles.textWeight} as={Link} to='/'>
-				Home
-			</Menu.Item>
-		</Menu.Menu>
-		<Menu.Menu className="menu-color" style={styles.textWeight} position="right">
-			<Menu.Item active={path === '/about'} as={Link} to='/about'>
-				About
-			</Menu.Item>
-			<Menu.Item className="menu-color" style={styles.textWeight} active={path === '/more'} as={Link} to='/more'>
-				More
-			</Menu.Item>
-		</Menu.Menu>
-	</Menu>
+	<div className="menu" >
+		<ul className="navigation">
+			<li className="nav-list "><NavLink className="nav-link" activeClassName="selected" to='/'>Home</NavLink></li>
+			<li className="nav-list float-right border-left"><NavLink className="nav-link" activeClassName="selected" to='/about'>About</NavLink></li>
+			{/*<li className="nav-list float-right border-left"><NavLink className="nav-link" activeClassName="selected" to='/more'>More</NavLink></li>*/}
+		</ul>
+	</div>
 );
 
 export default NavBar;

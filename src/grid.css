@@ -1,103 +1,65 @@
-/*  Flexbox grid system from https://philipwalton.github.io/solved-by-flexbox/demos/grids/*/
-.Grid {
-  display: flex;
-  flex-wrap: wrap;
-}
-.Grid-column {
-    flex-direction: column;
-}
-.Grid-justify-content-center {
-    justify-content: center;
-}
-.Grid-cell-align-self {
-    align-self: center;
-}
-.Grid-cell {
-  flex: 1 auto;
-}
-/* With gutters */
-.Grid--gutters {
-  margin: -1em 0 0 -1em;
-}
-.Grid--gutters > .Grid-cell {
-  padding: 1em 0 0 1em;
+/*applies to all screens*/
+* {
+	box-sizing: border-box;
 }
 
-/* Alignment per row */
-.Grid--top {
-  align-items: flex-start;
-}
-.Grid--bottom {
-  align-items: flex-end;
-}
-.Grid--center {
-  align-items: center;
-}
-.Grid-space-around {
-  align-content: space-around;
+.row {
+	max-width: 1000px;
+	padding-left: 1.04166666%;
+  padding-right: 1.04166666%;
+	margin: 0 auto;
 }
 
-/* Alignment per cell */
-.Grid-cell--top {
-  align-self: flex-start;
-}
-.Grid-cell--bottom {
-  align-self: flex-end;
-}
-.Grid-cell--center {
-  align-self: center;
-}
-/* Base classes for all media */
-.Grid--fit > .Grid-cell {
-  flex: 1;
-}
-.Grid--full > .Grid-cell {
-  flex: 0 0 100%;
-}
-.Grid--1of2 > .Grid-cell {
-  flex: 0 0 50%
-}
-.Grid--1of3 > .Grid-cell {
-  flex: 0 0 33.3333%
-}
-.Grid--1of4 > .Grid-cell {
-  flex: 0 0 25%
+/*clearfix*/
+.row::before,
+.row::after {
+	display: table;
+	content: ' ';
 }
 
-/* Small to medium screens */
-@media (min-width: 24em) {
-  .small-Grid--fit > .Grid-cell {
-    flex: 1;
-  }
-  .small-Grid--full > .Grid-cell {
-    flex: 0 0 100%;
-  }
-  .small-Grid--1of2 > .Grid-cell {
-    flex: 0 0 50%
-  }
-  .small-Grid--1of3 > .Grid-cell {
-    flex: 0 0 33.3333%
-  }
-  .small-Grid--1of4 > .Grid-cell {
-    flex: 0 0 25%
-  }
+.row::after {
+	clear: both;
+}
+.col_4, .col_12, .col_3, .col_5, .col_6, .col_8, .col_2{
+	float: left;
+  	padding-left: 1.04166666%;
+  	padding-right: 1.04166666%;
+}
+/*mobile device default settings*/
+.col_4, .col_12, .col_3, .col_5,  .col_6, .col_8, .col_2{
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
 }
 
-/* Large screens */
-@media (min-width: 48em) {
-  .large-Grid--fit > .Grid-cell {
-    flex: 1;
-  }
-  .large-Grid--full > .Grid-cell {
-    flex: 0 0 100%;
-  }
-  .large-Grid--1of2 > .Grid-cell {
-    flex: 0 0 50%
-  }
-  .large-Grid--1of3 > .Grid-cell {
-    flex: 0 0 33.3333%
-  }
-  .large-Grid--1of4 > .Grid-cell {
-    flex: 0 0 25%
-  }
+/*non-mobile device screens*/
+@media only screen and (min-width: 769px) {
+html {
+	font-size: 100%;
+}
+
+.col_2{
+	width: 16%;
+}
+.col_3{
+	width: 25%;
+}
+.col_4{
+	width: 33.3%;
+}
+.col_5{
+	width: 42%;
+}
+.col_6{
+	width: 50%;
+}
+.col_8{
+	width: 66.6%;
+}
+.col_9{
+	width: 75%;
+}
+.col_12{
+	width: 100%;
+}
 }

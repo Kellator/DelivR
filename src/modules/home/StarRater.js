@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../grid.css';
-import '../../index.css';
+// import '../../index.css';
 
 function StarRater(props) {
     const stars = [];
@@ -19,7 +19,7 @@ function StarRater(props) {
     }
 
     return (
-        <div className="result-star result-text">
+        <div className="result-text result-star result-text">
             <span className="star-rater result-text gray">
                 {stars}
             </span>

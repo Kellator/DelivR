@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import Result from './result';
 import '../../grid.css';
-import '../../index.css';
+// import '../../index.css';
 
 
 class ResultList extends React.Component {
@@ -12,9 +12,11 @@ class ResultList extends React.Component {
             return <Result key={index} result={result} />
         });
         return(
-                <div className="Grid ">
+            <div className="">
+                <div className="">
                     {results}
                  </div>
+            </div>
         );
     }
 }
