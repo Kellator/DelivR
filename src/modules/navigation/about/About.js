@@ -9,7 +9,7 @@ const styles = {
 	}
 }
 const About = () => (
-	<div className="col_8 about">
+	<div className="col_12 about">
 		<h1 className="">About DelivR</h1>
 		<p className="">DelivR was developed as the capstone project for <a style={styles.links} href="https://www.thinkful.com/">Thinkful's Flexible Web Development</a> React/Redux unit.</p>
 		<p className="">DelivR uses the Yelp Fusion Transaction Search API.  At this time, the API does not return businesses without any reviews.</p>

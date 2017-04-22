@@ -3,7 +3,7 @@ import { NavBar } from './modules';
 import { HashRouter as Router, Route} from 'react-router-dom';
 import { HomeView, About, More, Page404, ReturnedResultList } from './modules';
 import './grid.css';
-// import './index.css';
+import './index.css';
 
 
 class App extends React.Component {
