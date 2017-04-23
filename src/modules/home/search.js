@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
 import '../../grid.css';
-// import '../../index.css';
+import '../../index.css';
 
 const Search = (props) => {
     const { handleSubmit, pristine, reset, submitting } = props
@@ -19,7 +19,6 @@ const Search = (props) => {
                 <div className="">
                     <button className="block rounded button " type="submit" disabled={pristine || submitting}>Feed Me!</button>
                 </div>
-                {/*<button className="block rounded button flex-item" type="button" disabled={pristine || submitting} onClick={reset}>Changed my mind...</button>*/}
             </form>
         </div>
     )

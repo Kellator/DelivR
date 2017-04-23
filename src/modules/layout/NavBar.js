@@ -2,7 +2,7 @@ import React from 'react';
 import { browserHistory } from 'react-router';
 import { NavLink } from 'react-router-dom';
 import '../../grid.css';
-// import '../../index.css';
+import '../../index.css';
 
 
 const NavBar = ({ path }) => (
@@ -10,7 +10,6 @@ const NavBar = ({ path }) => (
 		<ul className="navigation">
 			<li className="nav-list "><NavLink className="nav-link" activeClassName="selected" to='/'>Home</NavLink></li>
 			<li className="nav-list float-right border-left"><NavLink className="nav-link" activeClassName="selected" to='/about'>About</NavLink></li>
-			{/*<li className="nav-list float-right border-left"><NavLink className="nav-link" activeClassName="selected" to='/more'>More</NavLink></li>*/}
 		</ul>
 	</div>
 );

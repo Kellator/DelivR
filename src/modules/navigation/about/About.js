@@ -2,14 +2,15 @@ import React from 'react';
 const styles = {
 	links : {
 		color: 'white',
-		textDecoration: 'underline'
+		textDecoration: 'underline',
+		fontWeight: 'normal'
 	},
 	lists : {
 		listStyle: 'square'
 	}
 }
 const About = () => (
-	<div className="col_8 about">
+	<div className="col_12 about">
 		<h1 className="">About DelivR</h1>
 		<p className="">DelivR was developed as the capstone project for <a style={styles.links} href="https://www.thinkful.com/">Thinkful's Flexible Web Development</a> React/Redux unit.</p>
 		<p className="">DelivR uses the Yelp Fusion Transaction Search API.  At this time, the API does not return businesses without any reviews.</p>
@@ -37,7 +38,9 @@ const About = () => (
 			<li className="">React-Router-Redux v. 4.0.8</li>
 			<li className="">Redux-Form v.6.5.0</li>
 			<li className="">Redux-Thunk v2.2.0</li>
+			<li className="">Axios v0.15.3</li>
 		</ul>
+		<h4>Interested in more?  Check me out on GitHub at <a style={styles.links} href="https://github.com/Kellator">Kellator</a> or email me at <a style={styles.links} href="mailto:k.macleod21@gmail.com">Kelly Miller</a></h4>
 	</div>
 );
 

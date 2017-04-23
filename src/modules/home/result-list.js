@@ -1,19 +1,20 @@
 import React, { PropTypes } from 'react';
 import Result from './result';
+import NoResult from './noResult';
 import '../../grid.css';
-// import '../../index.css';
+import '../../index.css';
 
 
 class ResultList extends React.Component {
     render() {
-        console.log(this.props.results)
-        const results = this.props.results.map((result, index) => {
+        console.log(this.props.results);
+        const results = (this.props.results) ? this.props.results.map((result, index) => { 
             console.log(result);
             return <Result key={index} result={result} />
-        });
+        }) : <NoResult />;
         return(
-            <div className="">
-                <div className="">
+            <div className="center">
+                <div className="center">
                     {results}
                  </div>
             </div>

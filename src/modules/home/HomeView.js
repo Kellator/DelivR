@@ -1,7 +1,7 @@
 import React from 'react';
 import SearchPage from './searchPage';
 import '../../grid.css';
-// import '../../index.css';
+import '../../index.css';
 
 
 const HomeView = () => ( 
@@ -19,10 +19,5 @@ const HomeView = () => (
         </div>
     </div>
 );
-{/*const mapStateToProps = (state, props) => ({
-	search: {
-		cuisineSearch: props.cuisineSearch,
-		locationSearch: props.locationSearch
-	}
-});*/}
+
 export default HomeView;

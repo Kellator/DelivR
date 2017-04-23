@@ -7,9 +7,6 @@ axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
 axios.defaults.headers.post['Access-Control-Allow-Methods'] = 'PUT, GET, POST, DELETE, OPTIONS';
 axios.defaults.headers.post['Access-Control-Allow-Headers'] = 'accept, content-type, x-parse-application-id, x-parse-rest-api-key, x-parse-session-token';
 
-import URLSearchParams from 'url-search-params';
-const searchUrl = 'https://api.yelp.com/v3/transactions/delivery/search';
-
 //choose a type of food 
 export const CHOOSE_CUISINE = 'CHOOSE_CUISINE';
 //choose location
@@ -67,8 +64,6 @@ export const asyncRequest = (cuisine, location) => {
 				dispatch(fetchSuccess())
 				dispatch(saveResult(res.data))
 				history.replace('/results');
-				console.log("hello");
-				console.log(res.data);
 			})
 			.catch(error => console.log({error}));
 	}
