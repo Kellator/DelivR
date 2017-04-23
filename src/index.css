@@ -147,6 +147,31 @@ h2, h3 {
   margin-left: auto;
   margin-right: auto;
 }
+.no-result-div {
+  text-align: center;
+  margin-top: 30px;
+}
+.no-result-button {
+  background-color: white;
+  color: #3e3e3e;
+  font-weight: bold;
+  width: 100px;
+  height: 50px;
+  border: 1px solid #3e3e3e;
+  border-radius: .28571429rem;
+  min-height: 2.85714286em;
+  box-shadow: 0 1px 2px 0 #3e3e3e;
+  text-align: center;
+  vertical-align: center;
+}
+.home-link {
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
+    color:#3e3e3e;
+    vertical-align: center;
+    text-shadow: none;
+}
 @media only screen and (min-width: 769px) {
   .result_item {
   -webkit-appearance: none;

@@ -5,10 +5,10 @@ import '../../grid.css';
 import '../../index.css';
 
 const NoResult = () => (
-	<div >
-		<h1>I'm sorry.  Your search returned no results.</h1>
-        <h1>Try again with a different type of cuisine or different location.</h1>
-		<li className="nav-list "><NavLink className="nav-link" activeClassName="selected" to='/'>Home</NavLink></li>
+	<div className="col_12 no-result-div">
+		<h2 className="">I'm sorry.  Your search returned no results.</h2>
+        <h3 className="">Try again with a different type of cuisine or different location.</h3>
+		<button className="no-result-button"><NavLink className="home-link" to='/'>Home</NavLink></button>
 	</div>
 );
 
