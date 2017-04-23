@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import Result from './result';
+import NoResult from './noResult';
 import '../../grid.css';
 import '../../index.css';
 
