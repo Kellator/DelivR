@@ -2,7 +2,8 @@ import React from 'react';
 const styles = {
 	links : {
 		color: 'white',
-		textDecoration: 'underline'
+		textDecoration: 'underline',
+		fontWeight: 'normal'
 	},
 	lists : {
 		listStyle: 'square'
@@ -37,7 +38,9 @@ const About = () => (
 			<li className="">React-Router-Redux v. 4.0.8</li>
 			<li className="">Redux-Form v.6.5.0</li>
 			<li className="">Redux-Thunk v2.2.0</li>
+			<li className="">Axios v0.15.3</li>
 		</ul>
+		<h4>Interested in more?  Check me out on GitHub at <a style={styles.links} href="https://github.com/Kellator">Kellator</a> or email me at <a style={styles.links} href="mailto:k.macleod21@gmail.com">Kelly Miller</a></h4>
 	</div>
 );
 
