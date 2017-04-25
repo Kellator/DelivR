@@ -1,11 +1,5 @@
 import { history } from '../../redux/store';
 
-const initialState = {
-    cuisine: "",
-    location: "",
-    fetching: false,
-};
-
 // saves type of cuisine to state - dispatched on submit
 export function cuisineReducer(state = "", action) {
 	switch (action.type) {
