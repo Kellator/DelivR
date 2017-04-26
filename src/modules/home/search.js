@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Field, reduxForm } from 'redux-form';
 import '../../grid.css';
 import '../../index.css';
 
-const Search = (props) => {
-    const { handleSubmit, pristine, reset, submitting } = props
+let Search = (props) => {
+    const { handleSubmit, pristine, submitting } = props
     return (
         <div className="">
             <form onSubmit={handleSubmit(props.onSubmit)} className="search-width" >
