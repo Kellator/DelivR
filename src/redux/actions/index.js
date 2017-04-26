@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { history } from '../../redux/store';
-import { push, replace } from 'react-router-redux';
+// import { push, replace } from 'react-router-redux';
 require('axios-debug')(axios);
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
@@ -47,9 +47,9 @@ export const fetchError = (bool) => ({
 export const fetchRequest = () => ({
 	type: FETCH_REQUEST,
 });
-export const displayResults = () => {
-    type: DISPLAY_RESULTS;
-}
+export const displayResults = () => ({
+    type: DISPLAY_RESULTS,
+});
 // make fetch to 'localhost'  in production do to hosted site
 export const asyncRequest = (cuisine, location) => {
 	return dispatch => {

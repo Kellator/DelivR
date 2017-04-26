@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 import { Button } from 'semantic-ui-react';
 import { browserHistory } from 'react-router';
 import { Link } from 'react-router-dom';
@@ -10,4 +10,4 @@ const Page404 = () => (
 	</div>
 );
 
-export default Page404;
+export default Page404;*/
