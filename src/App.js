@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavBar } from './modules';
 import { HashRouter as Router, Route} from 'react-router-dom';
-import { HomeView, About, More, Page404, ReturnedResultList } from './modules';
+import { HomeView, About, More, ReturnedResultList } from './modules';
 import './grid.css';
 import './index.css';
 

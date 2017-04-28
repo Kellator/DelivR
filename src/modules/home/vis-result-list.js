@@ -1,7 +1,6 @@
 import React from 'react';
 import ResultList from './result-list';
 import {connect} from 'react-redux';
-import * as actions from '../../redux/actions';
 import '../../index.css';
 
 class ReturnedResultList extends React.Component {

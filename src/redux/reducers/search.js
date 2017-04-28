@@ -1,4 +1,4 @@
-import { history } from '../../redux/store';
+// import { history } from '../../redux/store';
 
 // saves type of cuisine to state - dispatched on submit
 export function cuisineReducer(state = "", action) {

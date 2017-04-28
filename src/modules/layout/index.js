@@ -1,4 +1,4 @@
 import NavBar from './NavBar';
-import Page404 from './Page404';
+// import Page404 from './Page404';
 
-export { NavBar, Page404 };
+export { NavBar };
