@@ -7,17 +7,31 @@ import '../../index.css';
 
 class ResultList extends React.Component {
     render() {
+        console.log(this.props.results);
         const results = (this.props.results) ? this.props.results.map((result, index) => { 
             console.log(result);
             return <Result key={index} result={result} />
-        }) : <NoResult />;
-        return(
+        }) : undefined;
+        console.log(this.props.results);
+        if ((this.props.results) === []) {
+            console.log(results);
+            return (
             <div className="center">
                 <div className="center">
-                    {results}
-                 </div>
+                    <NoResult />;
+                </div>
             </div>
-        );
+            )
+        }
+        else {
+            return(
+                <div className="center">
+                    <div className="center">
+                        {results}
+                    </div>
+                </div>
+            );
+        }
     }
 }
 export default ResultList; 
