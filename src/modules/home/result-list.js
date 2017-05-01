@@ -1,6 +1,5 @@
 import React from 'react';
 import Result from './result';
-
 import '../../grid.css';
 import '../../index.css';
 
