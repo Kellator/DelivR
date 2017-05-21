@@ -21,8 +21,7 @@ const enhancers = compose(
 export const initialState = {
     cuisine: "",
     location: "",
-    fetching: false,
-    token: ""
+    fetching: false
 };
 let store = createStore(
     rootReducer,
