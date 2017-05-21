@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StarRater component render without throwing error 1`] = `
+<div
+  className="result_star"
+>
+  <span
+    className="center-text gray"
+  >
+    <i
+      className="fa fa-star-o"
+    />
+    <i
+      className="fa fa-star-o"
+    />
+    <i
+      className="fa fa-star-o"
+    />
+    <i
+      className="fa fa-star-o"
+    />
+    <i
+      className="fa fa-star-o"
+    />
+  </span>
+</div>
+`;
