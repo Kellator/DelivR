@@ -1,7 +1,7 @@
 # DelivR
 ## Developed as the capstone project for Thinkful Full-Stack Web Development Bootcamp React/Redux Unit.
 ### Introduction to DelivR
-Delivr allows a user to search the Yelp Fusion API for a restaurant that delivers food to wherever you are.  Currently, Delivr works in the United States.
+DelivR allows a user to search the Yelp Fusion API for a restaurant that delivers food to wherever you are.  Currently, Delivr works in the United States.
 Search for what you're hungry for by entering the cuisine type (Pizza) and your current location or zipcode (Boston, MA)
 If the type of cuisine you're looking for is not available in your location, you will be prompted to try again with different search criteria.
 ### Usecase:  Why is DelivR useful?
@@ -14,7 +14,7 @@ DelivR is designed to look great and be easy to use on desktop devices as seen b
 <img alt="DelivR Desktop Main" src="https://github.com/Kellator/delivr-react-app/blob/master/src/DelivR_SS/DelivR_desktop.png" width="400px" />
 <img alt="DelivR Desktop Results Screen" src="https://github.com/Kellator/delivr-react-app/blob/master/src/DelivR_SS/DevliR_results_desktop.png" width="400px" />
 <br>
-DelivR was also designed with Mobile in mind.  DelivR allows users to make calls through click-to-call links in each returned result.
+DelivR was also designed with Mobile in mind.  DelivR allows users to make calls through click-to-call links in each returned result.<br>
 <img alt="DelivR mobile" src="https://github.com/Kellator/delivr-react-app/blob/master/src/DelivR_SS/Delivr_Mobile.png" width="200px" />
 <img alt="DelivR mobile results" src="https://github.com/Kellator/delivr-react-app/blob/master/src/DelivR_SS/DelivR_results_mobile.png" width="200px" />
 <br>
