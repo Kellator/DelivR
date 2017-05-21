@@ -1,6 +1,4 @@
 # DelivR
-![DelivR desktop](https://github.com/Kellator/delivr-react-app/blob/master/src/DelivR_SS/DelivR_desktop.png)
-![DelivR mobile](https://github.com/Kellator/delivr-react-app/blob/master/src/DelivR_SS/Delivr_Mobile.png)
 ## Developed as the capstone project for Thinkful Full-Stack Web Development Bootcamp React/Redux Unit.
 ### Introduction to DelivR
 Delivr allows a user to search the Yelp Fusion API for a restaurant that delivers food to wherever you are.  Currently, Delivr works in the United States.
@@ -12,7 +10,9 @@ but you could really go for some General Tso's or a BBQ Chicken Pizza.  DelivR w
 ### UX
 DelivR was designed with simplicity in mind.  No one wants a complicated interface when they are hungry.  Simple input fields, large easy to read buttons, and click-to-call links make DelivR easy to use.  
 Check out a live version hosted at [DelivR](https://kellator.github.io/delivr-react-app/#/)
-![DelivR desktop results](https://github.com/Kellator/delivr-react-app/blob/master/src/DelivR_SS/DevliR_results_desktop.png)
-![DelivR mobile results](https://github.com/Kellator/delivr-react-app/blob/master/src/DelivR_SS/DelivR_results_mobile.png)
+![DelivR desktop](https://github.com/Kellator/delivr-react-app/blob/master/src/DelivR_SS/DelivR_desktop.png =200)
+![DelivR desktop results](https://github.com/Kellator/delivr-react-app/blob/master/src/DelivR_SS/DevliR_results_desktop.png =200)
+![DelivR mobile](https://github.com/Kellator/delivr-react-app/blob/master/src/DelivR_SS/Delivr_Mobile.png =200)
+![DelivR mobile results](https://github.com/Kellator/delivr-react-app/blob/master/src/DelivR_SS/DelivR_results_mobile.png =200)
 ### Technical
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app) 
