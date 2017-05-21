@@ -10,9 +10,9 @@ but you could really go for some General Tso's or a BBQ Chicken Pizza.  DelivR w
 ### UX
 DelivR was designed with simplicity in mind.  No one wants a complicated interface when they are hungry.  Simple input fields, large easy to read buttons, and click-to-call links make DelivR easy to use.  
 Check out a live version hosted at [DelivR](https://kellator.github.io/delivr-react-app/#/)
-![DelivR desktop](https://github.com/Kellator/delivr-react-app/blob/master/src/DelivR_SS/DelivR_desktop.png =200)
-![DelivR desktop results](https://github.com/Kellator/delivr-react-app/blob/master/src/DelivR_SS/DevliR_results_desktop.png =200)
-![DelivR mobile](https://github.com/Kellator/delivr-react-app/blob/master/src/DelivR_SS/Delivr_Mobile.png =200)
-![DelivR mobile results](https://github.com/Kellator/delivr-react-app/blob/master/src/DelivR_SS/DelivR_results_mobile.png =200)
+![DelivR desktop](https://github.com/Kellator/delivr-react-app/blob/master/src/DelivR_SS/DelivR_desktop.png =400x)
+![DelivR desktop results](https://github.com/Kellator/delivr-react-app/blob/master/src/DelivR_SS/DevliR_results_desktop.png =400x)
+![DelivR mobile](https://github.com/Kellator/delivr-react-app/blob/master/src/DelivR_SS/Delivr_Mobile.png =200x)
+![DelivR mobile results](https://github.com/Kellator/delivr-react-app/blob/master/src/DelivR_SS/DelivR_results_mobile.png =200x)
 ### Technical
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app) 
