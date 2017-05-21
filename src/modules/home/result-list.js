@@ -1,6 +1,5 @@
 import React from 'react';
 import Result from './result';
-import NoResult from './noResult';
 import '../../grid.css';
 import '../../index.css';
 
@@ -11,7 +10,7 @@ class ResultList extends React.Component {
         const results = (this.props.results) ? this.props.results.map((result, index) => { 
             console.log(result);
             return <Result key={index} result={result} />
-        }) : <NoResult />;
+        }) : undefined;
         return(
             <div className="center">
                 <div className="center">

@@ -1,5 +1,4 @@
 import React from 'react';
-// import { browserHistory } from 'react-router';
 import { NavLink } from 'react-router-dom';
 import '../../grid.css';
 import '../../index.css';

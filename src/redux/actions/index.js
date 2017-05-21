@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { history } from '../../redux/store';
-// import { push, replace } from 'react-router-redux';
+
 require('axios-debug')(axios);
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
@@ -54,7 +54,7 @@ export const displayResults = () => ({
 export const asyncRequest = (cuisine, location) => {
 	return dispatch => {
 		dispatch(fetchRequest()) 
-		return axios.get('https://mysterious-inlet-23273.herokuapp.com/search', {
+		return axios.get('https://mysterious-inlet-23273.herokuapp.com/search/', {
 			params:{
 				cuisine: cuisine,
 				location: location
