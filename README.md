@@ -14,3 +14,5 @@ DelivR was designed with simplicity in mind.  No one wants a complicated interfa
 Check out a live version hosted at [DelivR] (https://kellator.github.io/delivr-react-app/#/)
 ![DelivR desktop results] (../src/DelivR_SS/DelivR_results_desktop.png)
 ![DelivR mobile results] (../src/DelivR_SS/DelivR_results_mobile.png)
+### Technical
+This project was bootstrapped with [Create React App] (https://github.com/facebookincubator/create-react-app) 
