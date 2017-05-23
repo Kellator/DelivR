@@ -22,12 +22,12 @@ Check out a live version hosted at [DelivR](https://kellator.github.io/DelivR/#/
 ### Technical
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).  
 DelivR was developed using: 
--HTML5
--CSS3
--JavaScript
--React
--Redux
--Express
+- HTML5
+- CSS3
+- JavaScript
+- React
+- Redux
+- Express
 DelivR is responsive and adjusts to different viewport sizes.  
 DelivR is hosted on GH Pages with a proxy run through Heroku to access Yelp's Fusion API.
 ### Testing Suite and Continuous Integration
