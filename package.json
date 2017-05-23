@@ -2,7 +2,7 @@
   "name": "delivr-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://kellator.github.io/delivr-react-app/",
+  "homepage": "https://kellator.github.io/DelivR/",
   "dependencies": {
     "axios": "^0.15.3",
     "axios-debug": "0.0.4",
@@ -27,7 +27,7 @@
     "url-search-params": "^0.7.0"
   },
     "jest": {
-      "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
+      "transform": {".*": "<rootDir>/node_modules/babel-jest"},
       "unmockedModulePathPatterns": [
         "<rootDir>/node_modules/react",
         "<rootDir>/node_modules/react-dom",

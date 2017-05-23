@@ -18,16 +18,16 @@ DelivR was also designed with Mobile in mind.  DelivR allows users to make calls
 <img alt="DelivR mobile" src="https://github.com/Kellator/delivr-react-app/blob/master/src/DelivR_SS/Delivr_Mobile.png" width="200px" />
 <img alt="DelivR mobile results" src="https://github.com/Kellator/delivr-react-app/blob/master/src/DelivR_SS/DelivR_results_mobile.png" width="200px" />
 <br>
-Check out a live version hosted at [DelivR](https://kellator.github.io/delivr-react-app/#/)
+Check out a live version hosted at [DelivR](https://kellator.github.io/DelivR/#/)
 ### Technical
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).  
 DelivR was developed using: 
-..*HTML5
-..*CSS3
-..*JavaScript
-..*React
-..*Redux
-..*Express
+*HTML5
+*CSS3
+*JavaScript
+*React
+*Redux
+*Express
 DelivR is responsive and adjusts to different viewport sizes.  
 DelivR is hosted on GH Pages with a proxy run through Heroku to access Yelp's Fusion API.
 ### Testing Suite and Continuous Integration
