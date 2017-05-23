@@ -1,5 +1,34 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`NoResult component render without throwing error 1`] = `
+<div
+  className="col_12 no-result-div"
+>
+  <h2
+    className=""
+  >
+    I'm sorry.  Your search returned no results.
+  </h2>
+  <h3
+    className=""
+  >
+    Try again with a different type of cuisine or different location.
+  </h3>
+  <button
+    className="no-result-button"
+  >
+    <a
+      className="active home-link"
+      href="/"
+      onClick={[Function]}
+      style={Object {}}
+    >
+      Home
+    </a>
+  </button>
+</div>
+`;
+
 exports[`StarRater component render without throwing error 1`] = `
 <div
   className="result_star"
