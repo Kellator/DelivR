@@ -19,25 +19,27 @@
     "react-router-redux": "^4.0.8",
     "react-test-renderer": "^15.5.4",
     "redux": "^3.6.0",
-    "redux-form": "^6.5.0",
+    "redux-form": "^6.7.0",
     "redux-logger": "^2.8.2",
     "redux-thunk": "^2.2.0",
     "request-promise": "^4.2.0",
     "semantic-ui-react": "^0.67.1",
     "url-search-params": "^0.7.0"
   },
-    "jest": {
-      "transform": {".*": "<rootDir>/node_modules/babel-jest"},
-      "unmockedModulePathPatterns": [
-        "<rootDir>/node_modules/react",
-        "<rootDir>/node_modules/react-dom",
-        "<rootDir>/node_modules/react-addons-test-utils",
-        "<rootDir>/node_modules/fbjs"
-        ],
-        "moduleNameMapper": {
+  "jest": {
+    "transform": {
+      ".*": "<rootDir>/node_modules/babel-jest"
+    },
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/react",
+      "<rootDir>/node_modules/react-dom",
+      "<rootDir>/node_modules/react-addons-test-utils",
+      "<rootDir>/node_modules/fbjs"
+    ],
+    "moduleNameMapper": {
       "\\.(css)$": "<rootDir>/node_modules/jest-css-modules"
     }
-    },
+  },
   "devDependencies": {
     "babel-core": "^6.24.0",
     "babel-jest": "^19.0.0",
@@ -72,4 +74,3 @@
     ]
   }
 }
-

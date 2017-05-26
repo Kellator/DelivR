@@ -2,7 +2,7 @@ import React from 'react';
 
 const styles = {
 	links : {
-		color: 'white',
+		color: 'rgb(122, 1, 1)',
 		textDecoration: 'underline',
 		fontWeight: 'normal'
 	},
@@ -11,7 +11,7 @@ const styles = {
 	}
 }
 const About = () => (
-	<div className="col_12 about">
+	<div className="col_12 about about_center_rail">
 		<h1>About DelivR</h1>
 		<p>DelivR was developed as the capstone project for <a style={styles.links} href="https://www.thinkful.com/">Thinkful's Flexible Web Development</a> React/Redux unit.</p>
 		<p>DelivR uses the Yelp Fusion Transaction Search API.  At this time, the API does not return businesses without any reviews.</p>

@@ -1,9 +1,40 @@
 body {
   font-family: sans-serif;
   list-style: none;
-  background-color: #c01414;
+  /*background-color: #c01414;*/
+  /*background-image: url("./DelivR_SS/pizza_box.jpeg");*/
+  background-color: rgba(255, 255, 255);
+  background-image: url("./DelivR_SS/pizza_image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   box-sizing: border-box;
 }
+.center_rail {
+  background: rgba(62, 62, 62, 0.75);
+  max-width: 400px;
+  height: 100%;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  min-height: 100vh;
+}
+.about_center_rail {
+  background: rgba(255, 255, 255, 0.75);
+  min-height: 100vh;
+  margin-top: 1px;
+}
+.center_parent {
+  position: relative;
+}
+.top_child {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+}
+/*.bottom_child {
+  position: absolute;
+  top: 33%;
+}*/
 input[type=text] {
   padding: 5px;
   margin-bottom: 10px;
@@ -23,9 +54,9 @@ button {
   min-height: 2.587rem;
   max-width: 202px;
   min-width: 202px;
-  background-color: #4b4a4a;
+  background-color: rgb(122, 1, 1);
   color: white;
-  border: 1px solid #3e3e3e;
+  border: 1px solid white;
   box-shadow: 0 1px 2px 0 #202020;
   text-shadow:   -1px -1px 0  #202020,
   1px -1px 0  #202020,
@@ -47,8 +78,8 @@ button {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color:#d3d3d3;
-  box-shadow: 0 1px 2px 0 #3e3e3e;
+  background-color:rgba(62, 62, 62, 0.75);
+  box-shadow: 0 1px 2px 0 #202020;
 }
 .nav-list {
   display: inline-block;
@@ -60,7 +91,12 @@ button {
     text-align: center;
     font-weight: bold;
     padding: 10px;
-    color: black;
+    color: white;
+    text-shadow: 
+      -1px -1px 0  #202020,
+      1px -1px 0  #202020,
+      -1px 1px 0  #202020,
+      1px 1px 0  #202020;
 }
 .nav-list:hover {
   background-color: white;
@@ -101,19 +137,19 @@ button {
   font-size: 3em;
   font-weight: bold;
   text-shadow: 
-  -1px -1px 0  #3e3e3e,
-  1px -1px 0  #3e3e3e,
-  -1px 1px 0  #3e3e3e,
-  1px 1px 0  #3e3e3e;
+  -1px -1px 0  rgba(62, 62, 62, 1),
+  1px -1px 0  rgba(62, 62, 62, 1),
+  -1px 1px 0  rgba(62, 62, 62, 1),
+  1px 1px 0  rgba(62, 62, 62, 1);
   color: white;
 }
 .home-text {
   font-size: 1.2em;
   text-shadow: 
-  -1px -1px 0  #3e3e3e,
-  1px -1px 0  #3e3e3e,
-  -1px 1px 0  #3e3e3e,
-  1px 1px 0  #3e3e3e;
+  -1px -1px 0  rgba(62, 62, 62),
+  1px -1px 0  rgba(62, 62, 62),
+  -1px 1px 0  rgba(62, 62, 62),
+  1px 1px 0  rgba(62, 62, 62);
   color: white;
 }
 h1 {
