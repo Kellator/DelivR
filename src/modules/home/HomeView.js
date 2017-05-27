@@ -1,5 +1,5 @@
 import React from 'react';
-import SearchPage from './searchPage';
+import SearchPage from './searchPage';   
 import '../../grid.css';
 import '../../index.css';
 
