@@ -72,7 +72,7 @@ button {
 .block {
   display: block;
 }
-.center {
+.list_container {
   margin: auto;
 }
 /*white navigation bar */
@@ -112,26 +112,43 @@ button {
 .border-left {
   border-left: 1px solid #3e3e3e;
 }
-/*.result_item:hover {
-  -webkit-appearance: none;
-  height: 300px;
+.result_card:hover {
+  /*-webkit-appearance: none;*/
+  /*height: 300px;*/
   width: 280px;
+  margin-left: 30px;
+  margin-top: 20px;
   background-color: white;
-  margin: auto;
-  margin-top: 10px;
-  padding: 30px;
+  padding: 10px;
   border: 1px solid #3e3e3e;
   border-radius: .28571429rem;
-  min-height: 2.85714286em;
+  /*min-height: 2.85714286em;*/
   box-shadow: 0 1px 2px 0 #3e3e3e;
-}*/
+}
+.result_card {
+  height: 340px;
+  width: 280px;
+  margin-left: 32px;
+  margin-top: 20px;
+  /*margin-right: auto;
+  margin-left: auto;*/
+  padding: 10px;
+  border-radius: .28571429rem;
+  box-shadow: 0 1px 2px 0 #3e3e3e;
+  vertical-align: middle;
+  /*min-height: 2.85714286em;*/
+}
 .result-image {
   max-width: 150px;
-  max-height: 150px;
+  /*max-height: 150px;*/
   margin-left: auto;
   margin-right: auto;
   display: block;
   border-radius: 4px;
+}
+.card_contents {
+  display: table-cell;
+  vertical-align: middle;
 }
 .about {
   padding: 0 2em;

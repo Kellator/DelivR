@@ -12,10 +12,8 @@ class ResultList extends React.Component {
             return <Result key={index} result={result} />
         }) : undefined;
         return(
-            <div className="center">
-                <div className="center">
-                    {results}
-                 </div>
+            <div className="col_12">
+                {results}
             </div>
         );
     }
