@@ -1,3 +1,4 @@
+/*for all viewports*/
 body {
   font-family: sans-serif;
   list-style: none;
@@ -13,9 +14,9 @@ body {
   margin-bottom: 0;
   padding-bottom: 0;
 }
-/*white center rail*/
+/*white center rail
 .center_rail {
-  /*background: rgba(255, 255, 255, 0.75);*/
+  background: rgba(255, 255, 255, 0.75);
   max-width: 400px;
   height: 100%;
   margin-bottom: 0;
@@ -26,19 +27,20 @@ body {
 .about_center_rail {
   background: rgba(255, 255, 255, 0.90);
   min-height: 100vh;
-}
-.center_parent {
+}*/
+/*.center_parent {
   position: relative;
 }
 .top_child {
   position: absolute;
   top: 45%;
   transform: translateY(-50%);
-}
+}*/
 input[type=text] {
   padding-left: 5px;
 }
 input {
+  margin: auto;
   margin-bottom: 1rem;
   border-radius: .2857rem;
   min-height: 2.587rem;
@@ -46,10 +48,17 @@ input {
   min-width: 202px;
   box-shadow: 0 1px 2px 0 #202020;
 }
-.search-width {
+label {
+  display: block;
+  vertical-align: baseline;
   max-width: 202px;
+  min-width: 202px;
   margin: auto;
 }
+/*.search-width {
+  max-width: 202px;
+  margin: auto;
+}*/
 button {
   min-height: 2.587rem;
   max-width: 202px;
@@ -114,11 +123,12 @@ button {
 .result_card {
   height: 340px;
   width: 280px;
-  margin-left: 32px;
+  /*margin-left: 32px;*/
   margin-top: 20px;
   padding: 10px;
   border: 1px;
   border-radius: .28571429rem;
+  background-color: white;
   box-shadow: 0 1px 2px 0 #3e3e3e;
   vertical-align: middle;
   -webkit-transform-style: preserve-3d;
@@ -153,6 +163,10 @@ button {
   text-decoration: none;
   font-size: 1.2em;
   color: #202020;
+}
+.block {
+  display: block;
+  text-align: left;
 }
 h1 {
   -webkit-margin-before: 0.2em;
@@ -210,12 +224,27 @@ h2, h3 {
     vertical-align: center;
     text-shadow: none;
 }
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 736px) 
-  and (-webkit-min-device-pixel-ratio: 3) { 
-    .result_card {
-      background-color: white;
-      margin: auto;
-    }
+@media only screen and (min-width: 600px) {
+
+}
+@media only screen and (min-width: 768px) {
+  .result_card:hover {
+    background-color: white;
+    border: 1px solid #3e3e3e;
+    box-shadow: 0 1px 2px 0 #3e3e3e;
+  }
+  .result_card {
+    height: 340px;
+    width: 280px;
+    margin-left: 32px;
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px;
+    border-radius: .28571429rem;
+    box-shadow: 0 1px 2px 0 #3e3e3e;
+    vertical-align: middle;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  }
 }
