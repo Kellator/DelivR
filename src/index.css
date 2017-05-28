@@ -13,6 +13,7 @@ body {
   min-height: 100vh; 
   margin-bottom: 0;
   padding-bottom: 0;
+  /*max-width: 90vw;*/
 }
 /*white center rail
 .center_rail {
@@ -59,7 +60,8 @@ label {
   max-width: 202px;
   margin: auto;
 }*/
-button {
+.feedme_button {
+  display: block;
   min-height: 2.587rem;
   max-width: 202px;
   min-width: 202px;
@@ -75,10 +77,9 @@ button {
   margin: auto;
   margin-top: 16px;
   font-size: 1.2em;
+  text-align: center;
 }
-.block {
-  display: block;
-}
+
 .list_container {
   margin: auto;
 }
@@ -122,9 +123,11 @@ button {
 }
 .result_card {
   height: 340px;
-  width: 280px;
+  max-width: 280px;
   /*margin-left: 32px;*/
-  margin-top: 20px;
+  margin: auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
   padding: 10px;
   border: 1px;
   border-radius: .28571429rem;
@@ -141,6 +144,9 @@ button {
   margin-right: auto;
   display: block;
   border-radius: .28571429rem;
+}
+.results_container {
+  margin-bottom: 20px;
 }
 .card_contents {
   position: relative;
@@ -169,8 +175,8 @@ button {
   text-align: left;
 }
 h1 {
-  -webkit-margin-before: 0.2em;
-  -webkit-margin-after: 0.2em;
+  -webkit-margin-before: 0.7em;
+  -webkit-margin-after: 0.4em;
 }
 h2, h3 {
   -webkit-margin-before: 0.1em;
@@ -234,10 +240,15 @@ h2, h3 {
     box-shadow: 0 1px 2px 0 #3e3e3e;
   }
   .result_card {
+    background-color: none;
     height: 340px;
-    width: 280px;
-    margin-left: 32px;
-    margin-top: 20px;
+    /*max-width: 280px;*/
+    /*margin-left: 32px;*/
+    /*margin: 20px;*/
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
     padding: 10px;
     border: 1px;
     border-radius: .28571429rem;

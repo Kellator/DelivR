@@ -17,7 +17,7 @@ let Search = (props) => {
                     <Field className="block rounded " name="location" required component="input" type="text" placeholder="City, State or Zipcode" />
                 </div>
                 <div>
-                    <button className="block rounded button " type="submit" disabled={pristine || submitting}>Feed Me!</button>
+                    <button className=" feedme_button rounded button " type="submit" disabled={pristine || submitting}>Feed Me!</button>
                 </div>
             </form>
         </div>
