@@ -131,7 +131,7 @@ label {
   padding: 10px;
   border: 1px;
   border-radius: .28571429rem;
-  background-color: white;
+  /*background-color: white;*/
   box-shadow: 0 1px 2px 0 #3e3e3e;
   vertical-align: middle;
   -webkit-transform-style: preserve-3d;
@@ -179,8 +179,8 @@ h1 {
   -webkit-margin-after: 0.4em;
 }
 h2, h3 {
-  -webkit-margin-before: 0.1em;
-  -webkit-margin-after: 0.1em;
+  -webkit-margin-before: 0.3em;
+  -webkit-margin-after: 0.3em;
 }
 .result_star {
   display: block;
@@ -198,8 +198,12 @@ h2, h3 {
 .link-color:hover {
   color: #510000;
 }
+.phone-link:hover {
+  color: #510000;
+}
 .phone-link {
   color: #3e3e3e;
+  text-decoration: none;
 }
 .center {
   margin-left: auto;
