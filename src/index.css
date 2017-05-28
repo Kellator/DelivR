@@ -150,6 +150,7 @@ button {
 }
 /*white rail */
 .home-text {
+  text-decoration: none;
   font-size: 1.2em;
   color: #202020;
 }
@@ -209,17 +210,12 @@ h2, h3 {
     vertical-align: center;
     text-shadow: none;
 }
-@media only screen and (min-width: 769px) {
-  .result_item {
-  -webkit-appearance: none;
-  height: 300px;
-  width: 280px;
-  background-color: white;
-  margin: 20px;
-  padding: 30px;
-  border: 1px solid #3e3e3e;
-  border-radius: .28571429rem;
-  min-height: 2.85714286em;
-  box-shadow: 0 1px 2px 0 #3e3e3e;
-}
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+    .result_card {
+      background-color: white;
+      margin: auto;
+    }
 }
