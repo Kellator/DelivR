@@ -1,7 +1,6 @@
 body {
   font-family: sans-serif;
   list-style: none;
-  background-color: rgba(255, 255, 255);
   background-image: url("./DelivR_SS/pizza_image.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -28,7 +27,6 @@ body {
   background: rgba(255, 255, 255, 0.90);
   min-height: 100vh;
 }
-
 .center_parent {
   position: relative;
 }
@@ -75,6 +73,11 @@ button {
 .list_container {
   margin: auto;
 }
+.nav_bar {
+  width: inherit;
+  height: 34px;
+  border-bottom: 1px solid #646464;
+}
 /*white navigation bar */
 .navigation {
   position: absolute;
@@ -82,26 +85,17 @@ button {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  /*background-color: rgba(255, 255, 255, 1);
-  box-shadow: 0 1px 2px 0 #202020;*/
 }
 .nav-list {
-  /*display: inline-block;*/
-  /*padding: 8px;*/
-  /*border-right: 1px solid #3e3e3e;*/
+  display: inline-block;
+  padding: 8px;
 }
 .nav-link {
     text-decoration: none;
     text-align: center;
     font-weight: bold;
-    background-color: rgba(255, 255, 255, 1);
-    /*padding: 10px;*/
+    padding: 10px;
     color: rgba(32, 32, 32, 1);
-    /*text-shadow: 
-      -1px -1px 0  #202020,
-      1px -1px 0  #202020,
-      -1px 1px 0  #202020,
-      1px 1px 0  #202020;*/
 }
 .nav-list:hover {
   background-color: rgb(122, 1, 1);
@@ -153,23 +147,8 @@ button {
 .title {
   font-size: 3em;
   font-weight: bold;
-  /*text-shadow: 
-  -1px -1px 0  rgba(62, 62, 62, 1),
-  1px -1px 0  rgba(62, 62, 62, 1),
-  -1px 1px 0  rgba(62, 62, 62, 1),
-  1px 1px 0  rgba(62, 62, 62, 1);*/
   color: #202020;
 }
-/*gray rail*/
-/*.home-text {
-  font-size: 1.2em;
-  text-shadow: 
-  -1px -1px 0  rgba(62, 62, 62),
-  1px -1px 0  rgba(62, 62, 62),
-  -1px 1px 0  rgba(62, 62, 62),
-  1px 1px 0  rgba(62, 62, 62);
-  color: white;
-}*/
 /*white rail */
 .home-text {
   font-size: 1.2em;

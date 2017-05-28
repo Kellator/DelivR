@@ -13,10 +13,10 @@ class App extends React.Component {
 		return (
 			<Router>
 			<div>
-				<div> 
-					<NavBar path={this.props.location.pathname} />
-				</div>
 				<div className="row body result_center_rail">
+					<div > 
+						<NavBar path={this.props.location.pathname} />
+					</div>
 					<Route exact path="/" component={HomeView} />
 					<Route path="/about" component={About} />
 					<Route path="/more" component={More} />

@@ -5,7 +5,7 @@ import '../../index.css';
 
 
 const NavBar = ({ path }) => (
-	<div className="menu" >
+	<div className="nav_bar" >
 		<ul className="navigation">
 			<li className="nav-list "><NavLink className="nav-link" activeClassName="selected" to='/'>Home</NavLink></li>
 			<li className="nav-list "><NavLink className="nav-link" activeClassName="selected" to='/about'>About</NavLink></li>
