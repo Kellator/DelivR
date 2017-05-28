@@ -10,11 +10,11 @@ let Search = (props) => {
             <form onSubmit={handleSubmit(props.onSubmit)} className="search-width" >
                 <div>
                     <label className="home-text block">I'm Hungry For...</label>
-                    <Field className="block rounded" name="cuisine" component="input" type="text" placeholder="  Chinese" />
+                    <Field className="block rounded" name="cuisine" component="input" type="text" placeholder="Chinese" />
                 </div>
                 <div>
                     <label className="home-text block">Location</label>
-                    <Field className="block rounded " name="location" required component="input" type="text" placeholder="  City, State or Zipcode" />
+                    <Field className="block rounded " name="location" required component="input" type="text" placeholder="City, State or Zipcode" />
                 </div>
                 <div>
                     <button className="block rounded button " type="submit" disabled={pristine || submitting}>Feed Me!</button>
