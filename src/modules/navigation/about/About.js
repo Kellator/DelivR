@@ -2,7 +2,7 @@ import React from 'react';
 
 const styles = {
 	links : {
-		color: 'white',
+		color: 'rgb(122, 1, 1)',
 		textDecoration: 'underline',
 		fontWeight: 'normal'
 	},

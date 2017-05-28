@@ -1,14 +1,45 @@
 body {
   font-family: sans-serif;
   list-style: none;
-  background-color: #c01414;
+  background-image: url("./DelivR_SS/pizza_image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   box-sizing: border-box;
 }
+.result_center_rail {
+  background: rgba(255, 255, 255, 0.75);
+  height: 100%;
+  min-height: 100vh; 
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+/*white center rail*/
+.center_rail {
+  /*background: rgba(255, 255, 255, 0.75);*/
+  max-width: 400px;
+  height: 100%;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  min-height: 100vh;
+}
+.about_center_rail {
+  background: rgba(255, 255, 255, 0.90);
+  min-height: 100vh;
+}
+.center_parent {
+  position: relative;
+}
+.top_child {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+}
 input[type=text] {
-  padding: 5px;
-  margin-bottom: 10px;
+  padding-left: 5px;
 }
 input {
+  margin-bottom: 1rem;
   border-radius: .2857rem;
   min-height: 2.587rem;
   max-width: 202px;
@@ -23,9 +54,9 @@ button {
   min-height: 2.587rem;
   max-width: 202px;
   min-width: 202px;
-  background-color: #4b4a4a;
+  background-color: rgb(122, 1, 1);
   color: white;
-  border: 1px solid #3e3e3e;
+  border: 1px solid #202020;
   box-shadow: 0 1px 2px 0 #202020;
   text-shadow:   -1px -1px 0  #202020,
   1px -1px 0  #202020,
@@ -39,31 +70,35 @@ button {
 .block {
   display: block;
 }
-.center {
+.list_container {
   margin: auto;
 }
+.nav_bar {
+  width: inherit;
+  height: 34px;
+  border-bottom: 1px solid #646464;
+}
+/*white navigation bar */
 .navigation {
+  position: absolute;
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color:#d3d3d3;
-  box-shadow: 0 1px 2px 0 #3e3e3e;
 }
 .nav-list {
   display: inline-block;
   padding: 8px;
-  border-right: 1px solid #3e3e3e;
 }
 .nav-link {
     text-decoration: none;
     text-align: center;
     font-weight: bold;
     padding: 10px;
-    color: black;
+    color: rgba(32, 32, 32, 1);
 }
 .nav-list:hover {
-  background-color: white;
+  background-color: rgb(122, 1, 1);
 }
 .float-right {
   float: right;
@@ -71,25 +106,36 @@ button {
 .border-left {
   border-left: 1px solid #3e3e3e;
 }
-.result_item {
-  -webkit-appearance: none;
-  height: 300px;
-  width: 280px;
+.result_card:hover {
   background-color: white;
-  margin: auto;
-  margin-top: 10px;
-  padding: 30px;
   border: 1px solid #3e3e3e;
-  border-radius: .28571429rem;
-  min-height: 2.85714286em;
   box-shadow: 0 1px 2px 0 #3e3e3e;
+}
+.result_card {
+  height: 340px;
+  width: 280px;
+  margin-left: 32px;
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px;
+  border-radius: .28571429rem;
+  box-shadow: 0 1px 2px 0 #3e3e3e;
+  vertical-align: middle;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
 }
 .result-image {
   max-width: 150px;
-  max-height: 150px;
   margin-left: auto;
   margin-right: auto;
   display: block;
+  border-radius: .28571429rem;
+}
+.card_contents {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .about {
   padding: 0 2em;
@@ -98,23 +144,19 @@ button {
   text-align: center;
 }
 .title {
-  font-size: 3em;
+  font-size: 4em;
   font-weight: bold;
-  text-shadow: 
-  -1px -1px 0  #3e3e3e,
-  1px -1px 0  #3e3e3e,
-  -1px 1px 0  #3e3e3e,
-  1px 1px 0  #3e3e3e;
-  color: white;
+  color: #202020;
 }
+/*white rail */
 .home-text {
   font-size: 1.2em;
   text-shadow: 
-  -1px -1px 0  #3e3e3e,
-  1px -1px 0  #3e3e3e,
-  -1px 1px 0  #3e3e3e,
-  1px 1px 0  #3e3e3e;
-  color: white;
+  -1px -1px 0  rgba(62, 62, 62),
+  1px -1px 0  rgba(62, 62, 62),
+  -1px 1px 0  rgba(62, 62, 62),
+  1px 1px 0  rgba(62, 62, 62);
+  color: #202020;
 }
 h1 {
   -webkit-margin-before: 0.2em;
