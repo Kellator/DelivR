@@ -8,6 +8,9 @@ const styles = {
 	},
 	lists : {
 		listStyle: 'square'
+	},
+	listMargin : {
+		margin: '5px'
 	}
 }
 const About = () => (
@@ -20,12 +23,12 @@ const About = () => (
 		<p>Make use of one or more third party APIs and come up with an app that does something interesting.</p>
 		<h3>High-Level Requirements</h3>
 		<ul className="style={styles.lists}">
-			<li>Create a single page: The overarching user-experience should pull data from one or more third-party APIs and display the data to the user.</li>
-			<li>Make an app that does something interesting.</li>
-			<li>Use React, React Router, and Redux - the main technologies taught in the unit.</li>
-			<li>Comprehensive unit testing and continuous integration.</li>
-			<li>Have a polished appearance for the final version.  Implement an MVP, get feedback from testers, and use the feedback to develop a polished finished product.</li>
-			<li>Make the app responsive.  It should work on both mobile and desktop.  This should be accomplished using CSS and media queries.</li>
+			<li className="about_list">Create a single page: The overarching user-experience should pull data from one or more third-party APIs and display the data to the user.</li>
+			<li className="about_list">Make an app that does something interesting.</li>
+			<li className="about_list">Use React, React Router, and Redux - the main technologies taught in the unit.</li>
+			<li className="about_list">Comprehensive unit testing and continuous integration.</li>
+			<li className="about_list">Have a polished appearance for the final version.  Implement an MVP, get feedback from testers, and use the feedback to develop a polished finished product.</li>
+			<li className="about_list">Make the app responsive.  It should work on both mobile and desktop.  This should be accomplished using CSS and media queries.</li>
 		</ul>
 		<h3>Why did I choose to make this app?</h3>
 		<p>I've moved around a lot in my life.  When you move somewhere new, start a new job, or even visit someone in a place you're not familiar with, you probably get hungry and may not want to cook something.  How do you know who delivers to where you are?  I wanted to make it easier to figure that out so, I developed DelivR.</p>
@@ -33,13 +36,13 @@ const About = () => (
 		<p>This project was bootstrapped with <a style={styles.links} href="https://github.com/facebookincubator/create-react-app">Create React App</a>.</p>
 		<p>DelivR uses the <a style={styles.links} href="https://www.yelp.com/developers/documentation/v3">Yelp Fusion API</a>.</p>
 		<ul className="style={styles.lists}"> 
-			<li>React v.15.4.2</li>
-			<li>React-Redux v.5.0.3</li>
-			<li>React-Router-Dom</li>
-			<li>React-Router-Redux v. 4.0.8</li>
-			<li>Redux-Form v.6.5.0</li>
-			<li>Redux-Thunk v2.2.0</li>
-			<li>Axios v0.15.3</li>
+			<li className="about_list">React v.15.4.2</li>
+			<li className="about_list">React-Redux v.5.0.3</li>
+			<li className="about_list">React-Router-Dom</li>
+			<li className="about_list">React-Router-Redux v. 4.0.8</li>
+			<li className="about_list">Redux-Form v.6.5.0</li>
+			<li className="about_list">Redux-Thunk v2.2.0</li>
+			<li className="about_list">Axios v0.15.3</li>
 		</ul>
 		<h4>Interested in more?  Check me out on GitHub at <a style={styles.links} href="https://github.com/Kellator">Kellator</a> or email me at <a style={styles.links} href="mailto:k.macleod21@gmail.com">Kelly Miller</a></h4>
 	</div>
