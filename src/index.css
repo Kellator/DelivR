@@ -14,7 +14,7 @@ body {
   min-height: 100vh; 
   margin-bottom: 0;
   padding-bottom: 0;
-  padding: 0;
+  /*padding: 0;*/
 }
 form {
   margin-top: 2.587rem;
@@ -91,22 +91,19 @@ label {
     font-weight: bold;
     color: rgba(32, 32, 32, 1);
     display: block;
-    border-bottom: 1px solid rgb(122, 1, 1);
+    border-bottom: 1px solid #3e3e3e;
 }
 .nav-list:hover {
   background-color: rgb(122, 1, 1);
-}
-.float-right {
-  float: right;
 }
 .border-left {
   border-left: 1px solid #3e3e3e;
 }
 .result_card {
   height: 340px;
-  max-width: 280px;
+  /*max-width: 280px;*/
   /*margin-left: 32px;*/
-  margin: auto;
+  /*margin: auto;*/
   margin-top: 1em;
   margin-bottom: 1em;
   padding: 10px;
@@ -121,6 +118,7 @@ label {
 }
 .result-image {
   max-width: 150px;
+  max-height: 200px;
   margin-left: auto;
   margin-right: auto;
   display: block;
@@ -157,7 +155,7 @@ label {
   text-align: left;
 }
 h1 {
-  -webkit-margin-before: 1em;
+  -webkit-margin-before: .75em;
   -webkit-margin-after: .75em;
 }
 h2, h3 {
@@ -216,10 +214,7 @@ h2, h3 {
     vertical-align: center;
     text-shadow: none;
 }
-@media only screen and (min-width: 600px) {
-
-}
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 760px) {
   .result_card:hover {
     background-color: white;
     border: 1px solid #3e3e3e;
@@ -228,14 +223,8 @@ h2, h3 {
   .result_card {
     background-color: rgba(255, 255, 255, 0);
     height: 340px;
-    /*max-width: 280px;*/
-    /*margin-left: 32px;*/
-    /*margin: 20px;*/
-    margin-left: 1em;
-    margin-right: 1em;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    padding: 10px;
+    /*margin: 1em;*/
+    padding: 5px;
     border: 1px;
     border-radius: .28571429rem;
     box-shadow: 0 1px 2px 0 #3e3e3e;
