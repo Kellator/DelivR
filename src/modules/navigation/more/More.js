@@ -12,6 +12,7 @@ const More = () => (
 		<p>Unfortunately, if a restaurant is not listed in the Yelp Fusion API as having a transaction type of 'delivery', it will not show up in DelivR's search results.</p>
 		<p>Don't be too specific in your search terms for cuisine.  If you want a taco, try searching for Mexican.</p>
 		<p>If a location is closed, it will not show up in the search results.</p>
+		<p>Keep in mind that, at this time, this app only works in the U.S.</p>
 	</div>
 );
 

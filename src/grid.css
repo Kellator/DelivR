@@ -7,7 +7,7 @@
 	max-width: 1000px;
 	padding-left: 1.04166666%;
   	padding-right: 1.04166666%;
-	margin: auto;
+	margin: 0 auto;
 }
 
 /*clearfix*/
@@ -29,7 +29,7 @@
 }
 
 /*non-mobile device screens*/
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 760px) {
 	.col_4, .col_12, .col_3, .col_5, .col_6, .col_8, .col_2{
 	float: left;
   	padding-left: 1.04166666%;

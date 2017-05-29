@@ -8,9 +8,7 @@ import '../../index.css';
 
 class ReturnedResultList extends React.Component {
   render() {
-    console.log(this.props.result);
     let resultArray = this.props.result;
-    console.log(resultArray);
     if (resultArray.length === 0) {
       return  <NoResult />
     }
