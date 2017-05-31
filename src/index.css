@@ -8,6 +8,7 @@ body {
   background-size: cover;
   box-sizing: border-box;
 }
+
 .result_center_rail {
   background: rgba(255, 255, 255, 0.85);
   height: 100%;
@@ -37,6 +38,7 @@ label {
   max-width: 202px;
   min-width: 202px;
   margin: auto;
+  margin-bottom: 5px;
 }
 .feedme_button {
   display: block;
@@ -263,4 +265,17 @@ h2, h3 {
     -1px 1px 0  #202020,
     1px 1px 0  #202020; 
   }
+  .parallax { 
+    /* The image used */
+    background-image: url("./DelivR_SS/pizza_image.jpg");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 }
