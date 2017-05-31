@@ -12,7 +12,7 @@ class App extends React.Component {
 	render () {
 		return (
 			<Router>
-			<div>
+			<div className="parallax">
 				<div className="row body result_center_rail">
 					<div > 
 						<NavBar path={this.props.location.pathname} />
