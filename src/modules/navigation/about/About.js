@@ -38,9 +38,9 @@ const About = () => (
 		<ul className="style={styles.lists}"> 
 			<li className="about_list">React v.15.4.2</li>
 			<li className="about_list">React-Redux v.5.0.3</li>
-			<li className="about_list">React-Router-Dom</li>
+			<li className="about_list">React-Router-Dom v 15.5.4</li>
 			<li className="about_list">React-Router-Redux v. 4.0.8</li>
-			<li className="about_list">Redux-Form v.6.5.0</li>
+			<li className="about_list">Redux-Form v.6.7.0</li>
 			<li className="about_list">Redux-Thunk v2.2.0</li>
 			<li className="about_list">Axios v0.15.3</li>
 		</ul>
