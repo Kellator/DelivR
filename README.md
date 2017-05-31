@@ -11,12 +11,12 @@ but you could really go for some General Tso's or a BBQ Chicken Pizza.  DelivR w
 DelivR was designed with simplicity in mind.  No one wants a complicated interface when they are hungry.  Simple input fields, large easy to read buttons, and click-to-call links make DelivR easy to use.  
 <br>
 DelivR is designed to look great and be easy to use on desktop devices as seen below...
-<img alt="DelivR Desktop Main" src="https://github.com/Kellator/delivr-react-app/blob/master/src/DelivR_SS/desktop_main.png" width="400px" />
-<img alt="DelivR Desktop Results Screen" src="https://github.com/Kellator/delivr-react-app/blob/master/src/DelivR_SS/desktop_results.png" width="400px" />
+<img alt="DelivR Desktop Main" src="https://github.com/Kellator/delivr-react-app/blob/master/src/DelivR_SS/desktop_main.PNG" width="400px" />
+<img alt="DelivR Desktop Results Screen" src="https://github.com/Kellator/delivr-react-app/blob/master/src/DelivR_SS/desktop_results.PNG" width="400px" />
 <br>
 DelivR was also designed with Mobile in mind.  DelivR allows users to make calls through click-to-call links in each returned result.<br>
-<img alt="DelivR mobile" src="https://github.com/Kellator/delivr-react-app/blob/master/src/DelivR_SS/mobile_main.png" width="200px" />
-<img alt="DelivR mobile results" src="https://github.com/Kellator/delivr-react-app/blob/master/src/DelivR_SS/mobile_results.png" width="200px" />
+<img alt="DelivR mobile" src="https://github.com/Kellator/delivr-react-app/blob/master/src/DelivR_SS/mobile_main.PNG" width="200px" />
+<img alt="DelivR mobile results" src="https://github.com/Kellator/delivr-react-app/blob/master/src/DelivR_SS/mobile_results.PNG" width="200px" />
 <br>
 Check out a live version hosted at [DelivR](https://kellator.github.io/DelivR/#/)
 ### Technical
